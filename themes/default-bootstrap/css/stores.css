@@ -11,23 +11,22 @@
 #stores .address-input {
   float: left;
   margin-right: 19px; }
-  @media (max-width: 767px) {
-    #stores .address-input {
-      width: 100%;
-      margin: 0 0 20px 0; } }
-  #stores .address-input label {
-    margin-right: 5px; }
+@media (max-width: 767px) {
+  #stores .address-input {
+    width: 100%;
+    margin: 0 0 20px 0; } }
+#stores .address-input label {
+  margin-right: 5px; }
 #stores .radius-input {
   float: left;
   line-height: 23px;
   margin-right: 20px; }
-  #stores .radius-input label,
-  #stores .radius-input .selector {
-    float: left; }
-  #stores .radius-input label {
-    margin-right: 10px; }
-  #stores .radius-input #radiusSelect {
-    width: 78px; }
+#stores .radius-input label, #stores .radius-input .selector {
+  float: left; }
+#stores .radius-input label {
+  margin-right: 10px; }
+#stores .radius-input #radiusSelect {
+  width: 78px; }
 #stores .store-content {
   padding-bottom: 30px; }
 #stores .store-content-select .selector {
@@ -37,14 +36,14 @@
   padding-top: 30px;
   margin-bottom: 30px;
   border-top: 1px solid #d6d4d4; }
-  #stores .store-content-select.active .selector {
-    visibility: visible;
-    display: block; }
+#stores .store-content-select.active .selector {
+  visibility: visible;
+  display: block; }
 #stores .store-title {
   margin-bottom: 16px; }
 #stores label {
   font-weight: normal;
-  color: #777; }
+  color: #000; }
 #stores #stores_loader {
   display: none;
   margin-left: 5px; }
@@ -53,16 +52,16 @@
   visibility: hidden; }
 #stores #stores-table {
   display: none; }
-  #stores #stores-table tbody td {
-    padding: 20px; }
-    #stores #stores-table tbody td.num {
-      background: #fbfbfb;
-      width: 46px; }
-    #stores #stores-table tbody td.name span {
-      padding-left: 15px; }
-    @media (max-width: 767px) {
-      #stores #stores-table tbody td.name img {
-        display: none; } }
+#stores #stores-table tbody td {
+  padding: 20px; }
+#stores #stores-table tbody td.num {
+  background: #fbfbfb;
+  width: 46px; }
+#stores #stores-table tbody td.name span {
+  padding-left: 15px; }
+@media (max-width: 767px) {
+  #stores #stores-table tbody td.name img {
+    display: none; } }
 
 .store-image img {
   width: 100%;

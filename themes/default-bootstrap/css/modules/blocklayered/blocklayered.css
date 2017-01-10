@@ -24,8 +24,7 @@
   float: right;
   padding-right: 5px; }
 
-#layered_block_left span.layered_close a,
-#layered_block_left span.layered_close a {
+#layered_block_left span.layered_close a, #layered_block_left span.layered_close a {
   display: block;
   height: 13px;
   width: 13px;
@@ -162,10 +161,10 @@
 
 .layered_filter {
   border-bottom: 1px solid #eee; }
-  .layered_filter label {
-    font-weight: normal; }
-  .layered_filter layered_subtitle {
-    font-size: 1.2 em; }
+.layered_filter label {
+  font-weight: normal; }
+.layered_filter layered_subtitle {
+  font-size: 1.2 em; }
 
 #layered_block_left ul li {
   min-width: 50%;
