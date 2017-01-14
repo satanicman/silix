@@ -850,7 +850,7 @@ var ajaxCart = {
 		}
 		else
 		{
-			$('.ajax_cart_quantity, .ajax_cart_product_txt_s, .ajax_cart_product_txt, .ajax_cart_total').each(function(){
+			$('.ajax_cart_product_txt_s, .ajax_cart_product_txt, .ajax_cart_total').each(function(){
 				$(this).hide();
 			});
 			$('.ajax_cart_no_product').show('slow');

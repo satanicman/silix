@@ -1,4 +1,37 @@
-#block_top_menu {
-  padding-top: 25px; }
+@media (min-width: 768px) {
+  #block_top_menu {
+    width: 50%;
+    clear: none; } }
+@media (min-width: 768px) {
+  #block_top_menu .sf-menu {
+    background: none;
+    border: none;
+    display: table;
+    table-layout: fixed;
+    overflow: hidden; }
+  #block_top_menu .sf-menu:before, #block_top_menu .sf-menu:after {
+    display: none; }
+  #block_top_menu .sf-menu > li {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+    border: none;
+    margin: 0;
+    text-align: center; }
+  #block_top_menu .sf-menu > li > a {
+    display: inline-block;
+    text-transform: none;
+    padding: 0;
+    border: none;
+    color: inherit;
+    font-family: Verdana, serif;
+    font-size: 1.1875em;
+    line-height: 1;
+    font-weight: 400; }
+  #block_top_menu .sf-menu > li.sfHover > a, #block_top_menu .sf-menu > li > a:hover, #block_top_menu .sf-menu > li.sfHoverForce > a {
+    border: none;
+    background: none;
+    color: inherit;
+    text-decoration: underline; } }
 
 /*# sourceMappingURL=blocktopmenu.css.map */

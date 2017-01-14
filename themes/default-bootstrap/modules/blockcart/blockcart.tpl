@@ -23,31 +23,31 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <!-- MODULE Block cart -->
-{if isset($blockcart_top) && $blockcart_top}
-<div class="col-sm-4 clearfix{if $PS_CATALOG_MODE} header_user_catalog{/if}">
-{/if}
+{*{if isset($blockcart_top) && $blockcart_top}*}
+{*<div class="col-sm-4 clearfix{if $PS_CATALOG_MODE} header_user_catalog{/if}">*}
+{*{/if}*}
 	<div class="shopping_cart">
 		<a href="{$link->getPageLink($order_process, true)|escape:'html':'UTF-8'}" title="{l s='View my shopping cart' mod='blockcart'}" rel="nofollow">
-			<b>{l s='Cart' mod='blockcart'}</b>
-			<span class="ajax_cart_quantity{if $cart_qties == 0} unvisible{/if}">{$cart_qties}</span>
-			<span class="ajax_cart_product_txt{if $cart_qties != 1} unvisible{/if}">{l s='Product' mod='blockcart'}</span>
-			<span class="ajax_cart_product_txt_s{if $cart_qties < 2} unvisible{/if}">{l s='Products' mod='blockcart'}</span>
-			<span class="ajax_cart_total{if $cart_qties == 0} unvisible{/if}">
-				{if $cart_qties > 0}
-					{if $priceDisplay == 1}
-						{assign var='blockcart_cart_flag' value='Cart::BOTH_WITHOUT_SHIPPING'|constant}
-						{convertPrice price=$cart->getOrderTotal(false, $blockcart_cart_flag)}
-					{else}
-						{assign var='blockcart_cart_flag' value='Cart::BOTH_WITHOUT_SHIPPING'|constant}
-						{convertPrice price=$cart->getOrderTotal(true, $blockcart_cart_flag)}
-					{/if}
-				{/if}
-			</span>
-			<span class="ajax_cart_no_product{if $cart_qties > 0} unvisible{/if}">{l s='(empty)' mod='blockcart'}</span>
-			{if $ajax_allowed && isset($blockcart_top) && !$blockcart_top}
-				<span class="block_cart_expand{if !isset($colapseExpandStatus) || (isset($colapseExpandStatus) && $colapseExpandStatus eq 'expanded')} unvisible{/if}">&nbsp;</span>
-				<span class="block_cart_collapse{if isset($colapseExpandStatus) && $colapseExpandStatus eq 'collapsed'} unvisible{/if}">&nbsp;</span>
-			{/if}
+			{*<b>{l s='Cart' mod='blockcart'}</b>*}
+			<span class="ajax_cart_quantity">{$cart_qties}</span>
+			{*<span class="ajax_cart_product_txt{if $cart_qties != 1} unvisible{/if}">{l s='Product' mod='blockcart'}</span>*}
+			{*<span class="ajax_cart_product_txt_s{if $cart_qties < 2} unvisible{/if}">{l s='Products' mod='blockcart'}</span>*}
+			{*<span class="ajax_cart_total{if $cart_qties == 0} unvisible{/if}">*}
+				{*{if $cart_qties > 0}*}
+					{*{if $priceDisplay == 1}*}
+						{*{assign var='blockcart_cart_flag' value='Cart::BOTH_WITHOUT_SHIPPING'|constant}*}
+						{*{convertPrice price=$cart->getOrderTotal(false, $blockcart_cart_flag)}*}
+					{*{else}*}
+						{*{assign var='blockcart_cart_flag' value='Cart::BOTH_WITHOUT_SHIPPING'|constant}*}
+						{*{convertPrice price=$cart->getOrderTotal(true, $blockcart_cart_flag)}*}
+					{*{/if}*}
+				{*{/if}*}
+			{*</span>*}
+			{*<span class="ajax_cart_no_product{if $cart_qties > 0} unvisible{/if}">{l s='(empty)' mod='blockcart'}</span>*}
+			{*{if $ajax_allowed && isset($blockcart_top) && !$blockcart_top}*}
+				{*<span class="block_cart_expand{if !isset($colapseExpandStatus) || (isset($colapseExpandStatus) && $colapseExpandStatus eq 'expanded')} unvisible{/if}">&nbsp;</span>*}
+				{*<span class="block_cart_collapse{if isset($colapseExpandStatus) && $colapseExpandStatus eq 'collapsed'} unvisible{/if}">&nbsp;</span>*}
+			{*{/if}*}
 		</a>
 		{if !$PS_CATALOG_MODE}
 			<div class="cart_block block exclusive">
@@ -201,9 +201,9 @@
 			</div><!-- .cart_block -->
 		{/if}
 	</div>
-{if isset($blockcart_top) && $blockcart_top}
-</div>
-{/if}
+{*{if isset($blockcart_top) && $blockcart_top}*}
+{*</div>*}
+{*{/if}*}
 {counter name=active_overlay assign=active_overlay}
 {if !$PS_CATALOG_MODE && $active_overlay == 1}
 	<div id="layer_cart">

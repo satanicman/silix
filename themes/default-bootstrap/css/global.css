@@ -501,7 +501,7 @@ pre code {
 .row:after {
   clear: both; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, header .row #header_logo, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, header .row #header_logo, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -550,7 +550,7 @@ pre code {
   .container {
     max-width: 750px; }
 
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, header .row #header_logo, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11 {
+  .col-sm-1, .col-sm-2, .col-sm-3, header .row #header_logo, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11 {
     float: left; }
 
   .col-sm-1 {
@@ -559,10 +559,10 @@ pre code {
   .col-sm-2 {
     width: 16.66667%; }
 
-  .col-sm-3 {
+  .col-sm-3, header .row #header_logo {
     width: 25%; }
 
-  .col-sm-4, header .row #header_logo {
+  .col-sm-4 {
     width: 33.33333%; }
 
   .col-sm-5 {
@@ -5177,6 +5177,111 @@ th.visible-print, td.visible-print {
 .icon-medium:before {
   content: ""; }
 
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+.shopping_cart > a:first-child:before {
+  background-image: url(../img/sprite.png);
+  background-position: -103px -83px;
+  width: 44px;
+  height: 38px; }
+
+.fish-lift-icon {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -130px;
+  width: 55px;
+  height: 28px; }
+
+.fish-right-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -60px -130px;
+  width: 55px;
+  height: 28px; }
+
+.sale-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -103px 0px;
+  width: 78px;
+  height: 78px; }
+
+.scroll-icon {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 98px;
+  height: 125px; }
+
+.select-small-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -186px -143px;
+  width: 13px;
+  height: 8px; }
+
+.slider-big-next-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -186px 0px;
+  width: 27px;
+  height: 49px; }
+
+.slider-big-prev-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -186px -54px;
+  width: 27px;
+  height: 49px; }
+
+.slider-next-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -186px -108px;
+  width: 13px;
+  height: 30px; }
+
+.slider-prev-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -152px -83px;
+  width: 12px;
+  height: 28px; }
+
 a:hover {
   text-decoration: none; }
 
@@ -5205,8 +5310,7 @@ textarea {
 
 #columns {
   position: relative;
-  padding-bottom: 50px;
-  padding-top: 15px; }
+  padding-bottom: 50px; }
 
 #index .tab-content {
   margin-top: 35px;
@@ -5215,8 +5319,8 @@ textarea {
 header {
   z-index: 1;
   position: relative;
-  background: #fff;
-  padding-bottom: 15px; }
+  color: #fff;
+  font-family: Verdana, serif; }
 header .banner {
   background: black;
   max-height: 100%; }
@@ -5229,11 +5333,24 @@ header .nav .row {
 header .nav nav {
   width: 100%; }
 header .row {
-  position: relative; }
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
 header .row > .container {
   position: relative; }
-header .row #header_logo {
-  padding-top: 15px; }
 @media (max-width: 992px) {
   header .row #header_logo {
     padding-top: 40px; } }
@@ -5243,7 +5360,7 @@ header .row #header_logo {
   header .row #header_logo img {
     margin: 0 auto; } }
 @media (min-width: 767px) {
-  header .col-sm-4 + .col-sm-4 + .col-sm-4, header .row #header_logo + .col-sm-4 + .col-sm-4, header .row .col-sm-4 + #header_logo + .col-sm-4, header .row #header_logo + #header_logo + .col-sm-4, header .row .col-sm-4 + .col-sm-4 + #header_logo, header .row #header_logo + .col-sm-4 + #header_logo, header .row .col-sm-4 + #header_logo + #header_logo, header .row #header_logo + #header_logo + #header_logo {
+  header .col-sm-4 + .col-sm-4 + .col-sm-4 {
     float: right; } }
 
 .ie8 #header #header_logo {
@@ -6449,7 +6566,7 @@ div.star_hover a, div.star a:hover {
   color: #000; }
 
 .header-container {
-  background: #fff; }
+  background: #39c linear-gradient(to top, #28487e 0%, #379dd5 100%); }
 
 .breadcrumb {
   display: inline-block;

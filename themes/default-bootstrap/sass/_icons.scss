@@ -1,10 +1,41 @@
 //icons
+@import "sprite";
 
 //migrationfromfont-awesomev3tov4
 [class^="icon-"] {
 	@extend .icon;
 }
 
+.shopping_cart > a:first-child:before {
+	@include sprite($cart-big-icon);
+}
+.fish-lift-icon {
+	@include sprite($fish-lift-icon);
+}
+.fish-right-icon {
+	@include sprite($fish-right-icon);
+}
+.sale-icon {
+	@include sprite($sale-icon);
+}
+.scroll-icon {
+	@include sprite($scroll-icon);
+}
+.select-small-icon {
+	@include sprite($select-small-icon);
+}
+.slider-big-next-icon {
+	@include sprite($slider-big-next-icon);
+}
+.slider-big-prev-icon {
+	@include sprite($slider-big-prev-icon);
+}
+.slider-next-icon {
+	@include sprite($slider-next-icon);
+}
+.slider-prev-icon {
+	@include sprite($slider-prev-icon);
+}
 //.icon-ban-circle
 //	@extend .icon-ban
 .icon-bar-chart {

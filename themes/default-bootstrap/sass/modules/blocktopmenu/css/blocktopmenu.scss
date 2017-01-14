@@ -1,5 +1,48 @@
 @import "compass";
 @import "theme_variables";
 #block_top_menu {
-	padding-top: 25px;
+	@media (min-width: $screen-sm ) {
+		width: 50%;
+        clear: none;
+	}
+	.sf-menu {
+		@media (min-width: $screen-sm ) {
+			background: none;
+			border: none;
+			display: table;
+			table-layout: fixed;
+			overflow: hidden;
+			&:before,
+			&:after {
+				display: none;
+			}
+			> li {
+				display: table-cell;
+				vertical-align: middle;
+				float: none;
+				border: none;
+				margin: 0;
+				text-align: center;
+				> a {
+					display: inline-block;
+					text-transform: none;
+					padding: 0;
+					border: none;
+					color: inherit;
+					font-family: Verdana, serif;
+					font-size: em(19px);
+					line-height: 1;
+					font-weight: 400;
+				}
+				&.sfHover > a,
+                > a:hover,
+                &.sfHoverForce > a {
+					border: none;
+					background: none;
+					color: inherit;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
 }

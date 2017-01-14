@@ -47,7 +47,7 @@ textarea {
 #columns {
 	position: relative;
 	padding-bottom: 50px;
-	padding-top: 15px;
+	//padding-top: 15px;
 }
 
 #index {
@@ -60,8 +60,8 @@ textarea {
 header {
 	z-index: 1;
 	position: relative;
-	background: $light-background;
-	padding-bottom: 15px;
+    color: $light-text-color;
+    font-family: Verdana, serif;
 	.banner {
 		background: black;
 		max-height: 100%;
@@ -80,12 +80,27 @@ header {
 	}
 	.row {
 		position: relative;
+        padding-top: 15px;
+        padding-bottom: 15px;
+		margin: 0;
+        display: -webkit-flex;
+        display:  -webkit-box;
+        display:  -ms-flexbox;
+        display:         flex;
+		-webkit-align-items: center;
+		  -webkit-box-align: center;
+		     -ms-flex-align: center;
+		        align-items: center;
+		-webkit-justify-content: center;
+		-webkit-box-pack: center;
+		justify-content: center;
+		-ms-flex-pack: center;
 		> .container {
 			position: relative;
 		}
 		#header_logo {
-			padding-top: 15px;
-			@extend .col-sm-4;
+			//padding-top: 15px;
+			@extend .col-sm-3;
 			@media (max-width: $screen-md) {
 				padding-top: 40px;
 			}
@@ -1629,7 +1644,7 @@ div.star a:hover {
 }
 
 .header-container {
-	background: $light-background;
+	background: #39c linear-gradient(to top, #28487e 0%, #379dd5 100%);
 }
 
 // BREADCRUMB
