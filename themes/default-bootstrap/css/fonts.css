@@ -16,5 +16,17 @@
   src: url("../fonts/OpenSansSemiBold/OpenSansSemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansSemiBold/OpenSansSemiBold.woff") format("woff"), url("../fonts/OpenSansSemiBold/OpenSansSemiBold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
+@font-face {
+  font-family: "Open Sans Extrabold";
+  src: url("../fonts/OpenSansExtraBold/OpenSansExtraBold.eot");
+  src: url("../fonts/OpenSansExtraBold/OpenSansExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansExtraBold/OpenSansExtraBold.woff") format("woff"), url("../fonts/OpenSansExtraBold/OpenSansExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "Guerrilla";
+  src: url("../fonts/GuerrillaNormal/GuerrillaNormal.eot");
+  src: url("../fonts/GuerrillaNormal/GuerrillaNormal.eot?#iefix") format("embedded-opentype"), url("../fonts/GuerrillaNormal/GuerrillaNormal.woff") format("woff"), url("../fonts/GuerrillaNormal/GuerrillaNormal.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
 
 /*# sourceMappingURL=fonts.css.map */

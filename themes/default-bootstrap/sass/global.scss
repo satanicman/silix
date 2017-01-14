@@ -23,7 +23,7 @@ body {
 	min-width: 320px;
 	height: 100%;
 	line-height: 18px;
-	font-size: 13px;
+	font-size: 16px;
 	color: $base-body-color;
 	&.content_only {
 		background: none;
@@ -46,14 +46,35 @@ textarea {
 
 #columns {
 	position: relative;
-	padding-bottom: 50px;
+	padding-bottom: 40px;
 	//padding-top: 15px;
 }
 
 #index {
 	.tab-content {
-		margin-top: 35px;
-		margin-bottom: 34px;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+.product-slider {
+	&.product_list {
+		margin-bottom: 50px;
+	}
+	.slick-arrow {
+		width: auto;
+		height: auto;
+		background-color: rgba($slick-background, .15);
+		padding: 25px 5px;
+		z-index: 2;
+		&:before {
+			display: none;
+		}
+	}
+	.slick-prev {
+		left: 0;
+	}
+	.slick-next {
+		right: 0;
 	}
 }
 
@@ -511,25 +532,29 @@ span.exclusive {
 }
 
 .button.ajax_add_to_cart_button {
-	font: 700 17px / 21px $font-family;
-	color: $button-text-color;
-	text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
-	padding: 0;
-	border: 1px solid;
-	border-color: #0079b6 #006fa8 #012740 #006fa8;
+    @include display-flex;
+	@include align-items(center);
+	@include justify-content(space-between);
+	text-shadow: 0 0 9.9px rgba(255, 255, 255, 0.4);
+	color: $light-text-color;
+	font-family: $font-family-bold;
+	font-weight: 700;
+	line-height: 1;
+	background: $blue-background-color;
+	border: none;
+	font-size: inherit;
+	padding: 20px 9px;
 	span {
-		border: 1px solid;
-		border-color: #06b2e6;
-		padding: 10px 14px;
-		display: block;
-		background: rgb(0, 154, 208);
-		@include gradient-vertical(rgba(0, 154, 208, 1), rgba(0, 122, 183, 1));
+
+		//border: 1px solid;
+		//border-color: #06b2e6;
+		//padding: 10px 14px;
+		//display: block;
+		//background: rgb(0, 154, 208);
+		//@include gradient-vertical(rgba(0, 154, 208, 1), rgba(0, 122, 183, 1));
 	}
 	&:hover {
-		border-color: #01314e #004b74 #0079b6 #004b74;
 		span {
-			filter: none;
-			background: #0084bf;
 		}
 	}
 }
@@ -640,11 +665,15 @@ table.table_block td {
 }
 
 //product elements
+.product_list {
+	margin: 0;
+}
 .product-name {
-	font-size: 17px;
-	line-height: 23px;
-	color: $product-name-color;
-	margin-bottom: 0;
+	color: $base-text-color;
+	font-family: $font-family-bold;
+	font-size: em(20px);
+	font-weight: 700;
+	line-height: 1.2;
 	a {
 		font-size: 17px;
 		line-height: 23px;
@@ -659,14 +688,15 @@ table.table_block td {
 }
 
 .price {
-	font-size: 13px;
 	color: $price-color;
 	white-space: nowrap;
 }
 
 .price.product-price {
-	font: 600 21px / 26px $font-custom;
-	color: $product-price-color;
+	color: $blue-text-color;
+	font-family: "Open Sans Extrabold", serif;
+	font-weight: 400;
+	line-height: 23px;
 }
 
 .old-price {
@@ -699,24 +729,27 @@ table.table_block td {
 .new-box,
 .sale-box {
 	position: absolute;
-	top: -4px;
 	overflow: hidden;
-	height: 85px;
-	width: 85px;
 	text-align: center;
 	z-index: 0;
 }
 
 .new-box {
+	top: -4px;
 	left: -4px;
+	height: 85px;
+	width: 85px;
 }
 
 .sale-box {
-	right: -5px;
+	right: 10px;
+	top: 10px;
+	display: table;
+	table-layout: fixed;
 }
 
 .new-label {
-	font: 700 14px / 12px $font-family;
+	font: 700 14px / 12px $font-family-bold;
 	color: $light-text-color;
 	background: #6ad4ff;
 	text-transform: uppercase;
@@ -759,46 +792,12 @@ table.table_block td {
 }
 
 .sale-label {
-	font: 700 14px / 12px $font-family;
+	font: 700 em(15px) $font-family-bold;
+	line-height: 1;
 	color: $light-text-color;
-	background: #f13340;
-	text-transform: uppercase;
-	padding: 9px 0 7px;
-	text-shadow: 1px 1px rgba(0, 0, 0, 0.24);
-	width: 130px;
 	text-align: center;
-	display: block;
-	position: absolute;
-	right: -33px;
-	top: 16px;
-	z-index: 1;
-	@include rotate(45deg);
-	&:before {
-		position: absolute;
-		bottom: -3px;
-		right: 4px;
-		width: 0px;
-		height: 0px;
-		border-style: solid;
-		border-width: 4px 4px 0px 4px;
-		border-color: #ad2b34 transparent transparent transparent;
-		content: ".";
-		text-indent: -5000px;
-		@include rotate(225deg);
-	}
-	&:after {
-		position: absolute;
-		bottom: -3px;
-		left: 5px;
-		width: 0px;
-		height: 0px;
-		border-style: solid;
-		border-width: 4px 4px 0px 4px;
-		border-color: #ad2b34 transparent transparent transparent;
-		content: ".";
-		text-indent: -5000px;
-		@include rotate(135deg);
-	}
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .ie8 {
@@ -1073,12 +1072,29 @@ table.table_block td {
 }
 
 .page-heading {
-	font: 600 18px / 22px $font-custom;
-	color: $base-heading-color;
-	text-transform: uppercase;
-	padding: 0px 0px 17px 0px;
-	margin-bottom: 30px;
-	border-bottom: 1px solid $base-border-color;
+	@include background-image(linear-gradient(#348fc6, #2a5389));
+	@include background-clip(text);
+	font-family: GUERRILLA, serif;
+	font-size: em(51px);
+	line-height: 1;
+	font-weight: 400;
+	text-align: center;
+	color: transparent;
+	margin: 25px 0 30px;
+	&:before {
+		margin-right: 15px;
+	}
+	&:after {
+		margin-left: 15px;
+	}
+	&:before,
+	&:after {
+		display: inline-block;
+		content: '';
+		vertical-align: middle;
+	}
+
+	//color: $base-heading-color;
 	overflow: hidden;
 	span.heading-counter {
 		font: bold 13px / 22px $font-family;

@@ -5,16 +5,19 @@
 [class^="icon-"] {
 	@extend .icon;
 }
-
-.shopping_cart > a:first-child:before {
+.shopping_cart > a:first-child:before,
+.cart-big-icon{
 	@include sprite($cart-big-icon);
 }
+.page-heading:before,
 .fish-lift-icon {
 	@include sprite($fish-lift-icon);
 }
+.page-heading:after,
 .fish-right-icon {
 	@include sprite($fish-right-icon);
 }
+.sale-box,
 .sale-icon {
 	@include sprite($sale-icon);
 }

@@ -26,6 +26,19 @@
 var responsiveflag = false;
 
 $(document).ready(function(){
+	$('.product-slider').slick({
+		slidesToShow: 4,
+		prevArrow: '<button type="button" class="slick-prev"><i class="icon slider-prev-icon"></i></button>',
+		nextArrow: '<button type="button" class="slick-next"><i class="icon slider-next-icon"></i></button>',
+		// responsive: [
+		// 	{
+		// 		breakpoint: 480,
+		// 		settings: {
+		// 			slidesToShow: 1
+		// 		}
+		// 	}
+		// ]
+	});
 	highdpiInit();
 	responsiveResize();
 	$(window).resize(responsiveResize);
@@ -182,7 +195,8 @@ function responsiveResize()
 
 function blockHover(status)
 {
-	var screenLg = $('body').find('.container').width() == 1170;
+	// var screenLg = $('body').find('.container').width() == 1170;
+	var screenLg = false;
 
 	if ($('.product_list').is('.grid'))
 		if (screenLg)

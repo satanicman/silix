@@ -2,6 +2,7 @@
 
 //------- FONTS
 $font-family: Arial, Helvetica, sans-serif;
+$font-family-bold: 'Open Sans Bold', sans-serif;
 $font: normal 16px/18px $font-family;
 $font-custom: 'Open Sans', sans-serif;
 $font-icon: "FontAwesome";
@@ -13,20 +14,23 @@ $base-border-color: #d6d4d4;
 $main_border: 1px solid $base-border-color;
 $dark-border-color: #333;
 $light-border-color: #fff;
+$blue-border-color: #39c;
 $homepage-footer-border: #d9d9d9;
 
 //--------- BACKGROUNDS
+$blue-background-color: #39c;
 $base-box-bg: #fbfbfb;
 $table-background: $base-box-bg;
 $dark-background: #333;
 $light-background: #fff;
 $homepage-footer-bg: #f2f2f2;
+$slick-background: #232323;
 
 //--------- COLORS
 $base-body-color: #000;
 $base-text-color: #000;
 $blue-text-color: #369;
-$base-heading-color: #555454;
+$base-heading-color: #000;
 $base-title-color: $base-text-color;
 $light-text-color: #fff;
 $link-color: $link-color;
