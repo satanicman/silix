@@ -76,6 +76,10 @@
 						BXSlider Styles
 ********************************************************************************/
 	.bx-wrapper {
+		.bx-pager {
+			bottom: 0;
+			padding: 0;
+		}
 		a {
 			display: block;
 		}

@@ -64,6 +64,9 @@
     font-size: 0.5em; }
   #homepage-slider .homeslider-description p {
     font-size: 1.7em; } }
+#homepage-slider .bx-wrapper .bx-pager {
+  bottom: 0;
+  padding: 0; }
 #homepage-slider .bx-wrapper a {
   display: block; }
 #homepage-slider .bx-wrapper img {

@@ -49,14 +49,14 @@ $(document).ready(function(){
 		$('#homeslider').bxSlider({
 			useCSS: false,
 			maxSlides: 1,
-			slideWidth: homeslider_width,
+			// slideWidth: homeslider_width,
 			infiniteLoop: homeslider_loop,
 			hideControlOnEnd: true,
-			pager: false,
+			pager: true,
 			autoHover: true,
 			auto: homeslider_loop,
 			speed: parseInt(homeslider_speed),
 			pause: homeslider_pause,
-			controls: true
+			controls: false
 		});
 });
