@@ -23,8 +23,9 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-<section id="social_block" class="pull-right">
-	<ul>
+<section id="social_block" class="col-sm-2 col-xs-12">
+	<h4>{l s='We are in social networks:' mod='blocksocial'}</h4>
+	<ul class="clearfix">
 		{if isset($facebook_url) && $facebook_url != ''}
 			<li class="facebook">
 				<a class="_blank" href="{$facebook_url|escape:html:'UTF-8'}">
@@ -36,6 +37,13 @@
 			<li class="twitter">
 				<a class="_blank" href="{$twitter_url|escape:html:'UTF-8'}">
 					<span>{l s='Twitter' mod='blocksocial'}</span>
+				</a>
+			</li>
+		{/if}
+		{if isset($linkedin_url) && $linkedin_url != ''}
+			<li class="linkedin">
+				<a class="_blank" href="{$linkedin_url|escape:html:'UTF-8'}">
+					<span>{l s='Linkedin' mod='blocksocial'}</span>
 				</a>
 			</li>
 		{/if}
@@ -82,6 +90,4 @@
         	</li>
         {/if}
 	</ul>
-    <h4>{l s='Follow us' mod='blocksocial'}</h4>
 </section>
-<div class="clearfix"></div>

@@ -16,6 +16,7 @@ $_MODULE['<{blockcms}default-bootstrap>blockcms_6f3ebe2ce8a7c3b873c1003b6ead60df
 $_MODULE['<{blockcms}default-bootstrap>blockcms_e363df19c685465bca24d0c06d9394c7'] = 'Отметьте все страницы , которые должны отображаться в футере блока CMS.';
 $_MODULE['<{blockcms}default-bootstrap>blockcms_b0f8cd6eb22f287563dad544796b4118'] = 'Текстовая информация в футере';
 $_MODULE['<{blockcms}default-bootstrap>blockcms_75cb29c17cf91bef81cc289b0dd1b1fa'] = 'Отображать ссылку \"Наши магазины\" в футере';
+$_MODULE['<{blockcms}default-bootstrap>blockcms_83240b617a49328ae3aacc7c48a0b8da'] = 'Отображать ссылку \"Главная\" в футере';
 $_MODULE['<{blockcms}default-bootstrap>blockcms_0e5da791148c92be6eca8c537a47569e'] = 'Отображать ссылку \"Товары со скидкой\" в  футере';
 $_MODULE['<{blockcms}default-bootstrap>blockcms_e995cfe1489190cf28799a16d23be91a'] = 'Отображать ссылку \"Новые товары\" в футере';
 $_MODULE['<{blockcms}default-bootstrap>blockcms_edeab890c4f02138691d67eefcbfe7e8'] = 'Отображать ссылку \"Лидеры продаж\" в футере';
@@ -69,5 +70,6 @@ $_MODULE['<{blockcms}default-bootstrap>form_7dce122004969d56ae2e0245cb754d35'] =
 $_MODULE['<{blockcms}default-bootstrap>form_f2a6c498fb90ee345d997f888fce3b18'] = 'Удалить';
 $_MODULE['<{blockcms}default-bootstrap>form_49ee3087348e8d44e1feda1917443987'] = 'Имя';
 $_MODULE['<{blockcms}default-bootstrap>form_f7c68d40f8727c658e821c6e6d56af07'] = 'Страницы не созданы';
+$_MODULE['<{blockcms}default-bootstrap>blockcms_8cf04a9734132302f96da8e113e80ce5'] = 'Главная';
 $_MODULE['<{blockcms}default-bootstrap>blockcms_3cb29f0ccc5fd220a97df89dafe46290'] = 'Популярные товары';
 $_MODULE['<{blockcms}default-bootstrap>blockcms_8be39233fce812574e94aa277f5a2e32'] = '[1] %3$s %2$s - Интернет магазин разработан %1$s [/1]';

@@ -1762,16 +1762,28 @@ div.star a:hover {
 
 // FOOTER
 .footer-container {
-	background-color: $dark-background;
 	// min 768px
 	@media (min-width: $screen-sm) {
-		background: url(../img/footer-bg.png) repeat-x $dark-background;
+		background: url(../img/footer-bg.png) repeat-x;
+        @include background-size(cover);
+		padding: 80px 0 70px;
 	}
 	.container {
-		padding-bottom: 100px;
+		padding-top: 55px;
+		padding-bottom: 65px;
 	}
 	#footer {
-		color: #777777;
+		color: $blue-text-color;
+		background: $light-background;
+		border: 2px solid $blue-border-color;
+		> div {
+			padding-bottom: 55px;
+		}
+        .hr {
+			border-top-width: 2px;
+			border-color: $blue-border-color;
+			margin: 0 0 40px;
+		}
 		.row {
 			position: relative;
 		}
@@ -1779,16 +1791,20 @@ div.star a:hover {
 			position: static;
 		}
 		.footer-block {
-			margin-top: 45px;
 			// max 767px
 			@media (max-width: $screen-xs-max) {
 				margin-top: 20px;
 			}
 		}
 		a {
-			color: #777777;
+			color: #369;
+			font-family: $font-family-bold;
+			font-size: em(18px);
+			font-weight: 700;
+			line-height: 1;
 			&:hover {
-				color: $light-text-color;
+				text-decoration: underline;
+				color: inherit;
 			}
 		}
 		h4 {
@@ -1821,9 +1837,24 @@ div.star a:hover {
 			li {
 				padding-bottom: 8px;
 				a {
-					font-weight: bold;
-					text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
 				}
+			}
+		}
+		.category_footer {
+			li {
+				width: 50%;
+				float: left;
+			}
+		}
+		#footer_logo {
+			padding-top: 14px;
+			img {
+				margin: 0 auto;
+			}
+		}
+		#block_various_links_footer {
+			ul {
+				margin: 0;
 			}
 		}
 		#block_contact_infos {
@@ -1861,12 +1892,17 @@ div.star a:hover {
 			}
 		}
 		.blockcategories_footer {
-			clear: left;
+			//clear: left;
+			padding-left: 60px;
+			padding-right: 0;
+			ul {
+				margin: 0;
+			}
 		}
 		#social_block {
-			float: left;
-			width: 50%;
-			padding: 22px 15px 0 15px;
+			//float: left;
+			//width: 50%;
+			//padding: 22px 15px 0 15px;
 			// max 767px
 			@media (max-width: $screen-xs-max) {
 				width: 100%;
@@ -1874,39 +1910,42 @@ div.star a:hover {
 				padding-top: 5px;
 			}
 			ul {
-				float: right;
+				//float: right;
+				margin: 0;
 				@media (max-width: $screen-xs-max) {
 					float: none;
 				}
 				li {
 					float: left;
-					width: 40px;
+					padding-right: 10px;
+					padding-bottom: 0;
 					text-align: center;
-					// min 768px max 991px
-					@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
-						width: 30px;
+					&:last-of-type {
+						padding-right: 0;
 					}
 					a {
-						display: inline-block;
-						color: #908f8f;
-						font-size: 28px;
-						// min 768px max 991px
-						@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
-							font-size: 20px;
-						}
+                        @include display-flex;
+						@include align-items(center);
+						@include justify-content(center);
+						color: $light-text-color;
+						background: rgba($dark-background, .5);
+						@include border-radius(50%);
+						width: 32px;
+						height: 32px;
+						font: $font;
 						span {
 							display: none;
 						}
 						&:before {
 							display: inline-block;
 							font-family: $font-icon;
-							vertical-align: -5px;
+							vertical-align: middle;
 							font-weight: normal;
 							-webkit-font-smoothing: antialiased;
 							-moz-osx-font-smoothing: grayscale;
 						}
 						&:hover {
-							color: $light-text-color;
+							text-decoration: none;
 						}
 					}
 					&.facebook {
@@ -1920,6 +1959,13 @@ div.star a:hover {
 						a {
 							&:before {
 								content: "\f099";
+							}
+						}
+					}
+					&.linkedin {
+						a {
+							&:before {
+								content: "\f0e1";
 							}
 						}
 					}
@@ -1968,13 +2014,11 @@ div.star a:hover {
 				}
 			}
 			h4 {
-				float: right;
-				margin-bottom: 0;
-				font-size: 21px;
-				line-height: 25px;
-				text-transform: none;
-				padding: 0 10px 0 0;
-				// max 767px
+				color: $blue-text-color;
+				font-family: $font-family-bold;
+				font-size: em(18px);
+				font-weight: 700;
+				line-height: em(32px, 18px);
 				@media (max-width: $screen-xs-max) {
 					display: none;
 					text-align: center;
@@ -1983,12 +2027,17 @@ div.star a:hover {
 		}
 		.bottom-footer {
 			position: absolute;
-			bottom: -55px;
+			bottom: 0;
 			left: 0;
 			div {
-				padding: 15px 0 0 0;
-				border-top: 1px solid #515151;
+				text-align: center;
 				width: 100%;
+				a {
+					color: $blue-text-color;
+					font-family: $font-family-bold;
+					font-size: em(24px);
+					font-weight: 700;
+				}
 			}
 		}
 	}

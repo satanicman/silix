@@ -260,6 +260,21 @@ class BlockCms extends Module
 				),
 				array(
 					'type' => 'checkbox',
+					'name' => 'PS_HOME_DISPLAY_FOOTER',
+					'values' => array(
+						'query' => array(
+							array(
+								'id' => 'on',
+								'name' => $this->l('Display "Home" link in the footer'),
+								'val' => '1'
+							),
+						),
+						'id' => 'id',
+						'name' => 'name'
+					)
+				),
+				array(
+					'type' => 'checkbox',
 					'name' => 'cms_footer_display_price-drop',
 					'values' => array(
 						'query' => array(
@@ -366,6 +381,7 @@ class BlockCms extends Module
 		$this->fields_value['cms_footer_on'] = Configuration::get('FOOTER_BLOCK_ACTIVATION');
 		$this->fields_value['cms_footer_powered_by_on'] = Configuration::get('FOOTER_POWEREDBY');
 		$this->fields_value['PS_STORES_DISPLAY_FOOTER_on'] = Configuration::get('PS_STORES_DISPLAY_FOOTER');
+		$this->fields_value['PS_HOME_DISPLAY_FOOTER_on'] = Configuration::get('PS_HOME_DISPLAY_FOOTER');
 		$this->fields_value['cms_footer_display_price-drop_on'] = Configuration::get('FOOTER_PRICE-DROP');
 		$this->fields_value['cms_footer_display_new-products_on'] = Configuration::get('FOOTER_NEW-PRODUCTS');
 		$this->fields_value['cms_footer_display_best-sales_on'] = Configuration::get('FOOTER_BEST-SALES');
@@ -753,6 +769,7 @@ class BlockCms extends Module
 			$block_activation = (Tools::getValue('cms_footer_on') == 1) ? 1 : 0;
 
 			Configuration::updateValue('PS_STORES_DISPLAY_FOOTER', Tools::getValue('PS_STORES_DISPLAY_FOOTER_on'));
+			Configuration::updateValue('PS_HOME_DISPLAY_FOOTER', Tools::getValue('PS_HOME_DISPLAY_FOOTER_on'));
 			Configuration::updateValue('FOOTER_CMS', rtrim($footer_boxes, '|'));
 			Configuration::updateValue('FOOTER_POWEREDBY', $powered_by);
 			Configuration::updateValue('FOOTER_BLOCK_ACTIVATION', $block_activation);
@@ -860,6 +877,7 @@ class BlockCms extends Module
 					'contact_url' => 'contact',
 					'cmslinks' => BlockCMSModel::getCMSTitlesFooter(),
 					'display_stores_footer' => Configuration::get('PS_STORES_DISPLAY_FOOTER'),
+					'display_home_footer' => Configuration::get('PS_HOME_DISPLAY_FOOTER'),
 					'display_poweredby' => ((int)$display_poweredby === 1 || $display_poweredby === false),
 					'footer_text' => Configuration::get('FOOTER_CMS_TEXT_'.(int)$this->context->language->id),
 					'show_price_drop' => Configuration::get('FOOTER_PRICE-DROP'),

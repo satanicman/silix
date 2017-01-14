@@ -31,5 +31,6 @@ $_MODULE['<{blocksocial}default-bootstrap>blocksocial_5b2c8bfd1bc974966209b7be1c
 $_MODULE['<{blocksocial}default-bootstrap>blocksocial_86709a608bd914b28221164e6680ebf7'] = 'Pinterest';
 $_MODULE['<{blocksocial}default-bootstrap>blocksocial_15db599e0119be476d71bfc1fda72217'] = 'Vimeo';
 $_MODULE['<{blocksocial}default-bootstrap>blocksocial_55f015a0c5605702f913536afe70cfb0'] = 'Instagram';
+$_MODULE['<{blocksocial}default-bootstrap>blocksocial_0cc3513071bc29ee82b488a981ec0ffa'] = 'Мы в социальных сетях:';
 $_MODULE['<{blocksocial}default-bootstrap>blocksocial_970cfba66b8380fb97b742e4571356c6'] = 'Youtube';
 $_MODULE['<{blocksocial}default-bootstrap>blocksocial_dda8dc38128a8c843ba9f496d6ee7186'] = 'Google+';

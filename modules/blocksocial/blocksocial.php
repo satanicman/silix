@@ -48,6 +48,7 @@ class blocksocial extends Module
 	{
 		return (parent::install() AND Configuration::updateValue('BLOCKSOCIAL_FACEBOOK', '') &&
 			Configuration::updateValue('BLOCKSOCIAL_TWITTER', '') &&
+			Configuration::updateValue('BLOCKSOCIAL_LINKEDIN', '') &&
 			Configuration::updateValue('BLOCKSOCIAL_RSS', '') &&
 			Configuration::updateValue('BLOCKSOCIAL_YOUTUBE', '') &&
 			Configuration::updateValue('BLOCKSOCIAL_GOOGLE_PLUS', '') &&
@@ -80,6 +81,7 @@ class blocksocial extends Module
 		{
 			Configuration::updateValue('BLOCKSOCIAL_FACEBOOK', Tools::getValue('blocksocial_facebook', ''));
 			Configuration::updateValue('BLOCKSOCIAL_TWITTER', Tools::getValue('blocksocial_twitter', ''));
+			Configuration::updateValue('BLOCKSOCIAL_LINKEDIN', Tools::getValue('blocksocial_linkedin', ''));
 			Configuration::updateValue('BLOCKSOCIAL_RSS', Tools::getValue('blocksocial_rss', ''));
 			Configuration::updateValue('BLOCKSOCIAL_YOUTUBE', Tools::getValue('blocksocial_youtube', ''));
 			Configuration::updateValue('BLOCKSOCIAL_GOOGLE_PLUS', Tools::getValue('blocksocial_google_plus', ''));
@@ -104,6 +106,7 @@ class blocksocial extends Module
 			$this->smarty->assign(array(
 				'facebook_url' => Configuration::get('BLOCKSOCIAL_FACEBOOK'),
 				'twitter_url' => Configuration::get('BLOCKSOCIAL_TWITTER'),
+				'linkedin_url' => Configuration::get('BLOCKSOCIAL_LINKEDIN'),
 				'rss_url' => Configuration::get('BLOCKSOCIAL_RSS'),
 				'youtube_url' => Configuration::get('BLOCKSOCIAL_YOUTUBE'),
 				'google_plus_url' => Configuration::get('BLOCKSOCIAL_GOOGLE_PLUS'),
@@ -135,6 +138,12 @@ class blocksocial extends Module
 						'label' => $this->l('Twitter URL'),
 						'name' => 'blocksocial_twitter',
 						'desc' => $this->l('Your official Twitter account.'),
+					),
+					array(
+						'type' => 'text',
+						'label' => $this->l('Linkedin URL'),
+						'name' => 'blocksocial_linkedin',
+						'desc' => $this->l('Your official Linkedin account.'),
 					),
 					array(
 						'type' => 'text',
@@ -203,6 +212,7 @@ class blocksocial extends Module
 		return array(
 			'blocksocial_facebook' => Tools::getValue('blocksocial_facebook', Configuration::get('BLOCKSOCIAL_FACEBOOK')),
 			'blocksocial_twitter' => Tools::getValue('blocksocial_twitter', Configuration::get('BLOCKSOCIAL_TWITTER')),
+			'blocksocial_linkedin' => Tools::getValue('blocksocial_linkedin', Configuration::get('BLOCKSOCIAL_LINKEDIN')),
 			'blocksocial_rss' => Tools::getValue('blocksocial_rss', Configuration::get('BLOCKSOCIAL_RSS')),
 			'blocksocial_youtube' => Tools::getValue('blocksocial_youtube', Configuration::get('BLOCKSOCIAL_YOUTUBE')),
 			'blocksocial_google_plus' => Tools::getValue('blocksocial_google_plus', Configuration::get('BLOCKSOCIAL_GOOGLE_PLUS')),
