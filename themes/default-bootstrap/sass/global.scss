@@ -123,21 +123,20 @@ header {
 		position: relative;
         padding-top: 15px;
         padding-bottom: 15px;
-        @include display-flex;
-		@include align-items(center);
-		@include justify-content(center);
+		@media (min-width: $screen-md) {
+            @include display-flex;
+            @include align-items(center);
+            @include justify-content(center);
+		}
 		> .container {
 			position: relative;
 		}
 		#header_logo {
 			//padding-top: 15px;
-			@extend .col-sm-3;
+			@extend .col-md-3;
 			@media (max-width: $screen-md) {
-				padding-top: 40px;
-			}
-			@media (max-width: $screen-xs-max) {
-				padding-top: 15px;
-				img {
+				padding-top: 20px;
+                img {
 					margin: 0 auto;
 				}
 			}
@@ -578,7 +577,7 @@ span.exclusive {
 .button.ajax_add_to_cart_button {
     @include display-flex;
 	@include align-items(center);
-	@include justify-content(space-between);
+	@include justify-content(center);
 	text-shadow: 0 0 9.9px rgba(255, 255, 255, 0.4);
 	color: $light-text-color;
 	font-family: $font-family-bold;
@@ -592,6 +591,7 @@ span.exclusive {
 		padding: 15px 5px;
 	}
 	span {
+		margin-right: 3px;
 
 		//border: 1px solid;
 		//border-color: #06b2e6;
@@ -1333,14 +1333,14 @@ ul.footer_links {
 		text-align: center;
 		vertical-align: middle;
 		// min 992px max 1199px
-		@media (min-width: $screen-md) and (max-width: $screen-md-max) {
-			width: 380px;
-		}
+		//@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+		//	width: 380px;
+		//}
 		// max 991px
-		@media (max-width: $screen-sm-max) {
-			float: left;
-			width: auto;
-		}
+		//@media (max-width: $screen-sm-max) {
+		//	float: left;
+		//	width: auto;
+		//}
 		.showall {
 			float: right;
 			margin: 8px 53px 8px 14px;
@@ -1944,6 +1944,7 @@ div.star a:hover {
 			@media (max-width: $screen-md-max) {
 				text-align: center;
 				margin-top: 10px;
+				clear: left;
 			}
 			@media (max-width: $screen-xs-max) {
 				width: 100%;

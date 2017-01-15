@@ -30,8 +30,9 @@ a.fancybox-nav {
   outline: 0; }
 
 /* .pb-left-column ***************************************************************************** */
-.pb-left-column {
-  padding-right: 60px; }
+@media (min-width: 992px) {
+  .pb-left-column {
+    padding-right: 60px; } }
 .pb-left-column #image-block {
   position: relative;
   display: block;

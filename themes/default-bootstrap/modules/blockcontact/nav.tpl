@@ -25,7 +25,7 @@
 {*<div id="contact-link" {if isset($is_logged) && $is_logged} class="is_logged"{/if}>*}
 	{*<a href="{$link->getPageLink('contact', true)|escape:'html':'UTF-8'}" title="{l s='Contact us' mod='blockcontact'}">{l s='Contact us' mod='blockcontact'}</a>*}
 {*</div>*}
-<div class="b-shop-phone{if isset($is_logged) && $is_logged} is_logged{/if} col-md-3 pull-right">
+<div class="b-shop-phone{if isset($is_logged) && $is_logged} is_logged{/if} col-md-3">
     {if $telnumber}
             <span class="b-shop-phone__phone">{$telnumber|replace:'|':'<br/>'}</span>
             {*<i class="icon-phone"></i>{l s='Call us now:' mod='blockcontact'} <strong>{$telnumber}</strong>*}

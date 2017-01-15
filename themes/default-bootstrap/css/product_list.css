@@ -11,6 +11,10 @@ ul.product_list .product-name {
   letter-spacing: .5px; }
 ul.product_list .product-name:hover {
   color: inherit; }
+@media (max-width: 991px) {
+  ul.product_list .product-name {
+    font-size: 1.53846em;
+    text-align: center; } }
 ul.product_list .availability span {
   display: inline-block;
   color: #fff;
@@ -220,7 +224,7 @@ ul.product_list.grid .slick-track > li .product-container .button-container, ul.
   border: 2px solid #39c;
   font-size: 1.4375em;
   margin: 0; }
-@media (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   ul.product_list.grid .slick-track > li .product-container .button-container, ul.product_list.grid > li .product-container .button-container {
     font-size: 1.125em; } }
 ul.product_list.grid .slick-track > li .product-container .button-container > *, ul.product_list.grid > li .product-container .button-container > * {
@@ -253,9 +257,6 @@ ul.product_list.grid .slick-track > li .product-container .functional-buttons di
     display: block; } }
 @media (min-width: 992px) {
   ul.product_list.grid .slick-track > li.first-in-line, ul.product_list.grid > li.first-in-line {
-    clear: left; } }
-@media (min-width: 480px) and (max-width: 991px) {
-  ul.product_list.grid .slick-track > li.first-item-of-tablet-line, ul.product_list.grid > li.first-item-of-tablet-line {
     clear: left; } }
 ul.product_list.grid li.hovered h5 {
   min-height: 30px; }
@@ -404,8 +405,9 @@ ul.product_list.product-slider--product .slick-track > li .availability, ul.prod
 
 #product ul.product_list.grid.product-slider--product {
   margin-bottom: 80px; }
-#product ul.product_list.grid.product-slider--product .slick-track > li .product-container .button-container {
-  font-size: 1.125em; }
+@media (min-width: 992px) {
+  #product ul.product_list.grid.product-slider--product .slick-track > li .product-container .button-container {
+    font-size: 1.125em; } }
 #product ul.product_list.grid.product-slider--product .slick-track > li .product-container .button-container .button.ajax_add_to_cart_button {
   padding: 14px 5px;
   -webkit-justify-content: space-between;

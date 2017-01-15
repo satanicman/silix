@@ -36,6 +36,12 @@ $(document).ready(function(){
 				settings: {
 					slidesToShow: 3
 				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2
+				}
 			}
 		]
 	});

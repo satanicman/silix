@@ -17,6 +17,10 @@ ul.product_list {
 		&:hover {
 			color: inherit;
 		}
+		@media (max-width: $screen-sm-max) {
+			font-size: em(20px, 13px);
+			text-align: center;
+		}
 	}
 	.availability {
 		span {
@@ -283,7 +287,7 @@ ul.product_list.grid {
 				border: 2px solid $blue-border-color;
 				font-size: em(23px);
 				margin: 0;
-				@media (max-width: $screen-md-max) {
+				@media (min-width: $screen-md) and (max-width: $screen-md-max) {
 					font-size: em(18px);
 				}
 				.ajax_add_to_cart_button,
@@ -339,11 +343,11 @@ ul.product_list.grid {
 				clear: left;
 			}
 		}
-		@media (min-width: $screen-xs) and (max-width: $screen-sm-max) { // min 480px max 991px
-			&.first-item-of-tablet-line {
-				clear: left;
-			}
-		}
+		//@media (min-width: $screen-xs) and (max-width: $screen-sm-max) { // min 480px max 991px
+		//	&.first-item-of-tablet-line {
+		//		clear: left;
+		//	}
+		//}
 	}
 	li.hovered{
 		h5{
@@ -577,7 +581,9 @@ ul.product_list {
 		.slick-track > li {
 			.product-container {
 				.button-container {
-					font-size: em(18px);
+					@media (min-width: $screen-md) {
+						font-size: em(18px);
+					}
 					.button.ajax_add_to_cart_button {
 						padding: 14px 5px;
 						@include justify-content(space-between);

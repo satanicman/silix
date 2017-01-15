@@ -1,7 +1,10 @@
-@media (min-width: 768px) {
+#block_top_menu {
+  padding: 20px 0; }
+@media (min-width: 992px) {
   #block_top_menu {
     width: 50%;
-    clear: none; } }
+    clear: none;
+    padding: 0; } }
 @media (min-width: 768px) {
   #block_top_menu .sf-menu {
     background: none;

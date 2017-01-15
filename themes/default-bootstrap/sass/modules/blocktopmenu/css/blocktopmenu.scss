@@ -1,9 +1,11 @@
 @import "compass";
 @import "theme_variables";
 #block_top_menu {
-	@media (min-width: $screen-sm ) {
+	padding: 20px 0;
+	@media (min-width: $screen-md ) {
 		width: 50%;
         clear: none;
+		padding: 0;
 	}
 	.sf-menu {
 		@media (min-width: $screen-sm ) {

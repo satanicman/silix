@@ -121,14 +121,14 @@ $(document).ready(function()
 		slidesToShow: 3,
 		prevArrow: '<button type="button" class="slick-prev"><i class="icon slider-big-prev-icon"></i></button>',
 		nextArrow: '<button type="button" class="slick-next"><i class="icon slider-big-next-icon"></i></button>',
-		// responsive: [
-		// 	{
-		// 		breakpoint: 480,
-		// 		settings: {
-		// 			slidesToShow: 1
-		// 		}
-		// 	}
-		// ]
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2
+				}
+			}
+		]
 	});
 	$('.product-slider--product').slick({
 		slidesToShow: 5,
@@ -139,6 +139,12 @@ $(document).ready(function()
 				breakpoint: 1200,
 				settings: {
 					slidesToShow: 4
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2
 				}
 			}
 		]

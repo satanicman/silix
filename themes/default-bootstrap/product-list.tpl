@@ -26,12 +26,12 @@
 	{*define number of products per line in other page for desktop*}
 	{if $page_name !='index' && $page_name !='product'}
 		{assign var='nbItemsPerLine' value=4}
-		{assign var='nbItemsPerLineTablet' value=2}
-		{assign var='nbItemsPerLineMobile' value=3}
+		{assign var='nbItemsPerLineTablet' value=4}
+		{assign var='nbItemsPerLineMobile' value=4}
 	{else}
 		{assign var='nbItemsPerLine' value=4}
-		{assign var='nbItemsPerLineTablet' value=3}
-		{assign var='nbItemsPerLineMobile' value=2}
+		{assign var='nbItemsPerLineTablet' value=4}
+		{assign var='nbItemsPerLineMobile' value=4}
 	{/if}
 	{*define numbers of product per line in other page for tablet*}
 	{assign var='nbLi' value=$products|@count}

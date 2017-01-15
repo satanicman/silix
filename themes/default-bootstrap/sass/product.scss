@@ -34,7 +34,9 @@ a.fancybox-nav {
 }
 /* .pb-left-column ***************************************************************************** */
 .pb-left-column {
-	padding-right: 60px;
+	@media (min-width: $screen-md) {
+		padding-right: 60px;
+	}
 	#image-block {
 		position: relative;
 		display: block;
