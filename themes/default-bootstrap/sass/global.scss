@@ -56,28 +56,48 @@ textarea {
 		margin-bottom: 0;
 	}
 }
-.product-slider {
-	&.product_list {
-		margin-bottom: 50px;
-	}
-	.slick-arrow {
-		width: auto;
-		height: auto;
-		background-color: rgba($slick-background, .15);
-		padding: 25px 5px;
-		z-index: 2;
-		&:before {
-			display: none;
-		}
-	}
+.slick_custom {
 	.slick-prev {
 		left: 0;
 	}
 	.slick-next {
 		right: 0;
 	}
+	.slick-arrow {
+		width: auto;
+		height: auto;
+		z-index: 2;
+		&:before {
+			display: none;
+		}
+	}
 }
+.product-slider--product {
 
+}
+.product-slider {
+	&.product_list {
+		margin-bottom: 50px;
+	}
+	.slick-arrow {
+		background-color: rgba($slick-background, .15);
+		padding: 25px 5px;
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: rgba($slick-background, .15);
+		}
+	}
+}
+.product-images {
+	.slick-prev {
+		left: 15px;
+	}
+	.slick-next {
+		right: 15px;
+	}
+
+}
 header {
 	z-index: 1;
 	position: relative;
@@ -201,7 +221,18 @@ p.info-account {
 .label {
 	white-space: normal;
 	display: inline-block;
-	padding: 6px 10px;
+	@include background-clip(text);
+	color: transparent;
+	border: none;
+	padding: 0;
+	font: $font;
+	font-size: em(18px);
+	font-weight: 400;
+	&-success {
+		background-color: #093;
+	}
+	&-danger {}
+	&-warning {}
 }
 
 label {
@@ -467,25 +498,33 @@ span.exclusive {
 
 .btn.button-plus,
 .btn.button-minus {
-	font-size: 14px;
-	line-height: 14px;
-	color: $button-pm-color;
-	text-shadow: 1px -1px rgba(0, 0, 0, 0.05);
-	padding: 0;
-	border: 1px solid;
-	border-color: #dedcdc #c1bfbf #b5b4b4 #dad8d8;
-	@include border-radius(0);
-	span {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: -1px;
+	bottom: -1px;
+	border: 1px solid $blue-border-color;
+	&:before {
+		width: 10px;
+		height: 1px;
+		//margin-left: -5px;
+		//margin-top: -0.5px;
+	}
+	&:after {
+		width: 1px;
+		height: 10px;
+		//margin-left: -0.5px;
+		//margin-top: -5px;
+	}
+	&:before,
+	&:after {
+		content: '';
 		display: block;
-		border: 1px solid $light-border-color;
-		vertical-align: middle;
-		width: 25px;
-		height: 25px;
-		text-align: center;
-		vertical-align: middle;
-		padding: 4px 0 0 0;
-		background: rgb(255, 255, 255);
-		@include gradient-vertical(rgba(255, 255, 255, 1), rgba(251, 251, 251, 1));
+		background: $blue-background-color;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+        @include transform(translate(-50%, -50%));
 	}
 	&:hover {
 		color: $base-text-color;
@@ -493,6 +532,18 @@ span.exclusive {
 			filter: none;
 			background: #f6f6f6;
 		}
+	}
+}
+
+.btn.button-plus {
+	@include border-radius(0 3px 3px 0);
+	right: -1px;
+}
+.btn.button-minus {
+	left: -1px;
+    @include border-radius(3px 0 0 3px);
+	&:after {
+		display: none;
 	}
 }
 

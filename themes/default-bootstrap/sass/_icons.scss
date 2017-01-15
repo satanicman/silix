@@ -36,6 +36,9 @@
 .slider-prev-icon {
 	@include sprite($slider-prev-icon);
 }
+.full-icon {
+	@include sprite($full-icon);
+}
 //.icon-ban-circle
 //	@extend .icon-ban
 .icon-bar-chart {

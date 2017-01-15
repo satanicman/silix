@@ -24,7 +24,7 @@
 *}
 {if isset($products) && $products}
 	<h3 class="page-heading">{l s='Popular' mod='homefeatured'}</h3>
-	{include file="$tpl_dir./product-list.tpl" class='homefeatured product-slider' id='homefeatured'}
+	{include file="$tpl_dir./product-list.tpl" class='homefeatured product-slider slick_custom' id='homefeatured'}
 {else}
 <ul id="homefeatured" class="homefeatured tab-pane">
 	<li class="alert alert-info">{l s='No featured products at this time.' mod='homefeatured'}</li>

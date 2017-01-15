@@ -1,27 +1,27 @@
 /*
-* 2007-2016 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Academic Free License (AFL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/afl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
-*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
+ * 2007-2016 PrestaShop
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@prestashop.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+ * versions in the future. If you wish to customize PrestaShop for your
+ * needs please refer to http://www.prestashop.com for more information.
+ *
+ *  @author PrestaShop SA <contact@prestashop.com>
+ *  @copyright  2007-2016 PrestaShop SA
+ *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ *  International Registered Trademark & Property of PrestaShop SA
+ */
 //global variables
 var serialScrollNbImagesDisplayed;
 var selectedCombination = [];
@@ -67,10 +67,10 @@ if (typeof combinationImages !== 'undefined' && combinationImages)
 
 	if (typeof combinationImagesJS[0] !== 'undefined' && combinationImagesJS[0])
 	{
-	   var array_values = [];
-	   for (var key in arrayUnique(combinationImagesJS[0]))
-		   array_values.push(combinationImagesJS[0][key]);
-	   combinationImagesJS[0] = array_values;
+		var array_values = [];
+		for (var key in arrayUnique(combinationImagesJS[0]))
+			array_values.push(combinationImagesJS[0][key]);
+		combinationImagesJS[0] = array_values;
 	}
 	combinationImages = combinationImagesJS;
 }
@@ -95,13 +95,13 @@ if (typeof combinations !== 'undefined' && combinations)
 		combinationsJS[k]['minimal_quantity'] = parseInt(combinations[i]['minimal_quantity']);
 
 		combinationsJS[k]['available_date'] = [];
-			combinationsJS[k]['available_date']['date'] = combinations[i]['available_date'];
-			combinationsJS[k]['available_date']['date_formatted'] = combinations[i]['date_formatted'];
+		combinationsJS[k]['available_date']['date'] = combinations[i]['available_date'];
+		combinationsJS[k]['available_date']['date_formatted'] = combinations[i]['date_formatted'];
 
 		combinationsJS[k]['specific_price'] = [];
-			combinationsJS[k]['specific_price']['reduction_percent'] = (combinations[i]['specific_price'] && combinations[i]['specific_price']['reduction'] && combinations[i]['specific_price']['reduction_type'] == 'percentage') ? combinations[i]['specific_price']['reduction'] * 100 : 0;
-			combinationsJS[k]['specific_price']['reduction_price'] = (combinations[i]['specific_price'] && combinations[i]['specific_price']['reduction'] && combinations[i]['specific_price']['reduction_type'] == 'amount') ? combinations[i]['specific_price']['reduction'] : 0;
-			combinationsJS[k]['price'] = (combinations[i]['specific_price'] && combinations[i]['specific_price']['price'] && parseInt(combinations[i]['specific_price']['price']) != -1) ? combinations[i]['specific_price']['price'] :  combinations[i]['price'];
+		combinationsJS[k]['specific_price']['reduction_percent'] = (combinations[i]['specific_price'] && combinations[i]['specific_price']['reduction'] && combinations[i]['specific_price']['reduction_type'] == 'percentage') ? combinations[i]['specific_price']['reduction'] * 100 : 0;
+		combinationsJS[k]['specific_price']['reduction_price'] = (combinations[i]['specific_price'] && combinations[i]['specific_price']['reduction'] && combinations[i]['specific_price']['reduction_type'] == 'amount') ? combinations[i]['specific_price']['reduction'] : 0;
+		combinationsJS[k]['price'] = (combinations[i]['specific_price'] && combinations[i]['specific_price']['price'] && parseInt(combinations[i]['specific_price']['price']) != -1) ? combinations[i]['specific_price']['price'] :  combinations[i]['price'];
 
 		combinationsJS[k]['reduction_type'] = (combinations[i]['specific_price'] && combinations[i]['specific_price']['reduction_type']) ? combinations[i]['specific_price']['reduction_type'] : '';
 		combinationsJS[k]['id_product_attribute'] = (combinations[i]['specific_price'] && combinations[i]['specific_price']['id_product_attribute']) ? combinations[i]['specific_price']['id_product_attribute'] : 0;
@@ -116,6 +116,33 @@ if (typeof combinations !== 'undefined' && combinations)
 /* */
 $(document).ready(function()
 {
+
+	$('.product-images').slick({
+		slidesToShow: 3,
+		prevArrow: '<button type="button" class="slick-prev"><i class="icon slider-big-prev-icon"></i></button>',
+		nextArrow: '<button type="button" class="slick-next"><i class="icon slider-big-next-icon"></i></button>',
+		// responsive: [
+		// 	{
+		// 		breakpoint: 480,
+		// 		settings: {
+		// 			slidesToShow: 1
+		// 		}
+		// 	}
+		// ]
+	});
+	$('.product-slider--product').slick({
+		slidesToShow: 5,
+		prevArrow: '<button type="button" class="slick-prev"><i class="icon slider-big-prev-icon"></i></button>',
+		nextArrow: '<button type="button" class="slick-next"><i class="icon slider-big-next-icon"></i></button>',
+		// responsive: [
+		// 	{
+		// 		breakpoint: 480,
+		// 		settings: {
+		// 			slidesToShow: 1
+		// 		}
+		// 	}
+		// ]
+	});
 	var url_found = checkUrl();
 	//init the price in relation of the selected attributes
 	if (!url_found)
@@ -361,7 +388,7 @@ $(document).on('click', '.product_quantity_up', function(e){
 
 	$('#quantity_wanted').change();
 });
- // The button to decrement the product value
+// The button to decrement the product value
 $(document).on('click', '.product_quantity_down', function(e){
 	e.preventDefault();
 	fieldName = $(this).data('field-qty');
@@ -801,12 +828,12 @@ function updatePrice()
 
 	if (priceWithDiscountsDisplay > 0)
 	{
-    if(findSpecificPrice()){
-      $('#our_price_display').text(findSpecificPrice()).trigger('change');
-    }
-    else{
-      $('#our_price_display').text(formatCurrency(priceWithDiscountsDisplay, currencyFormat, currencySign, currencyBlank)).trigger('change');
-    }
+		if(findSpecificPrice()){
+			$('#our_price_display').text(findSpecificPrice()).trigger('change');
+		}
+		else{
+			$('#our_price_display').text(formatCurrency(priceWithDiscountsDisplay, currencyFormat, currencySign, currencyBlank)).trigger('change');
+		}
 	}
 	else
 	{
@@ -1014,7 +1041,7 @@ function refreshProductImages(id_product_attribute)
 	else
 		$('#wrapResetImages').stop(true, true).hide();
 
-	$('#thumbs_list_frame').width(parseInt($('#thumbs_list_frame >li').outerWidth(true) * $('#thumbs_list_frame >li').length) + 'px');
+	// $('#thumbs_list_frame').width(parseInt($('#thumbs_list_frame >li').outerWidth(true) * $('#thumbs_list_frame >li').length) + 'px');
 	$('#thumbs_list').trigger('goto', 0);
 	serialScrollFixLock('', '', '', '', 0);
 }
@@ -1031,13 +1058,13 @@ function submitPublishProduct(url, redirect, token)
 
 	$.ajaxSetup({async: false});
 	$.post(url + '/index.php', {
-		action:'publishProduct',
-		id_product: id_product,
-		status: 1,
-		redirect: redirect,
-		ajax: 1,
-		tab: 'AdminProducts',
-		token: token
+			action:'publishProduct',
+			id_product: id_product,
+			status: 1,
+			redirect: redirect,
+			ajax: 1,
+			tab: 'AdminProducts',
+			token: token
 		},
 		function(data)
 		{
@@ -1067,9 +1094,9 @@ function colorPickerClick(elt)
 	id_attribute = $(elt).attr('id').replace('color_', '');
 	$(elt).parent().parent().children().removeClass('selected');
 	$(elt).fadeTo('fast', 1, function(){
-	$(this).fadeTo('fast', 0, function(){
-		$(this).fadeTo('fast', 1, function(){
-			$(this).parent().addClass('selected');
+		$(this).fadeTo('fast', 0, function(){
+			$(this).fadeTo('fast', 1, function(){
+				$(this).parent().addClass('selected');
 			});
 		});
 	});

@@ -52,6 +52,7 @@ ul.product_list {
 	.product-image-container {
 		text-align: center;
 		img {
+			width: 100%;
 			margin: 0 auto;
 		}
 		.quick-view-wrapper-mobile {
@@ -524,8 +525,9 @@ ul.product_list.list {
 Product list(Index page) Styles
 ********************************************************/
 
-#index {
-	ul.product_list {
+ul.product_list {
+	&.product-slider--product,
+	&.product-slider {
 		.slick-track > li,
 		> li {
 			padding-top: ($grid-gutter-width / 2);
@@ -563,5 +565,24 @@ Product list(Index page) Styles
 	.quick-view	 {
 		background: #fff;
 		border: 1px solid $base-border-color;
+	}
+}
+#product {
+    ul.product_list.grid.product-slider--product {
+		margin-bottom: 80px;
+		.slick-track > li {
+			.product-container {
+				.button-container {
+					font-size: em(18px);
+					.button.ajax_add_to_cart_button {
+						padding: 14px 5px;
+						@include justify-content(space-between);
+					}
+				}
+				h5 {
+					margin: 10px 0;
+				}
+			}
+		}
 	}
 }
