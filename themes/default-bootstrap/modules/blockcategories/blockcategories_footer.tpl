@@ -24,9 +24,9 @@
 *}
 
 <!-- Block categories module -->
-<section class="blockcategories_footer footer-block col-xs-12 col-sm-5">
+<section class="blockcategories_footer footer-block col-xs-12 col-lg-5 col-sm-9">
 	{*<h4>{l s='Categories' mod='blockcategories'}</h4>*}
-	<div class="category_footer toggle-footer">
+	<div class="category_footer">
 		<div class="list">
 			<ul class="tree {if $isDhtml}dhtml{/if} clearfix">
 			{foreach from=$blockCategTree.children item=child name=blockCategTree}

@@ -134,14 +134,14 @@ $(document).ready(function()
 		slidesToShow: 5,
 		prevArrow: '<button type="button" class="slick-prev"><i class="icon slider-big-prev-icon"></i></button>',
 		nextArrow: '<button type="button" class="slick-next"><i class="icon slider-big-next-icon"></i></button>',
-		// responsive: [
-		// 	{
-		// 		breakpoint: 480,
-		// 		settings: {
-		// 			slidesToShow: 1
-		// 		}
-		// 	}
-		// ]
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 4
+				}
+			}
+		]
 	});
 	var url_found = checkUrl();
 	//init the price in relation of the selected attributes

@@ -588,6 +588,9 @@ span.exclusive {
 	border: none;
 	font-size: inherit;
 	padding: 20px 9px;
+	@media (max-width: $screen-md-max) {
+		padding: 15px 5px;
+	}
 	span {
 
 		//border: 1px solid;
@@ -1874,10 +1877,14 @@ div.star a:hover {
 			li {
 				width: 50%;
 				float: left;
+				padding-right: 10px;
 			}
 		}
 		#footer_logo {
 			padding-top: 14px;
+			@media (max-width: $screen-md-max) {
+				padding: 14px;
+			}
 			img {
 				margin: 0 auto;
 			}
@@ -1934,6 +1941,10 @@ div.star a:hover {
 			//width: 50%;
 			//padding: 22px 15px 0 15px;
 			// max 767px
+			@media (max-width: $screen-md-max) {
+				text-align: center;
+				margin-top: 10px;
+			}
 			@media (max-width: $screen-xs-max) {
 				width: 100%;
 				float: left;
@@ -1946,12 +1957,14 @@ div.star a:hover {
 					float: none;
 				}
 				li {
-					float: left;
 					padding-right: 10px;
 					padding-bottom: 0;
 					text-align: center;
+					display: inline-block;
+					margin-right: -4px;
 					&:last-of-type {
 						padding-right: 0;
+						margin-right: 0;
 					}
 					a {
                         @include display-flex;

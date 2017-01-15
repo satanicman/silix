@@ -283,6 +283,9 @@ ul.product_list.grid {
 				border: 2px solid $blue-border-color;
 				font-size: em(23px);
 				margin: 0;
+				@media (max-width: $screen-md-max) {
+					font-size: em(18px);
+				}
 				.ajax_add_to_cart_button,
 				span.button,
 				.lnk_view {
@@ -570,6 +573,7 @@ ul.product_list {
 #product {
     ul.product_list.grid.product-slider--product {
 		margin-bottom: 80px;
+
 		.slick-track > li {
 			.product-container {
 				.button-container {

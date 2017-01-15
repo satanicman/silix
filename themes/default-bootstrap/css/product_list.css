@@ -220,6 +220,9 @@ ul.product_list.grid .slick-track > li .product-container .button-container, ul.
   border: 2px solid #39c;
   font-size: 1.4375em;
   margin: 0; }
+@media (max-width: 1199px) {
+  ul.product_list.grid .slick-track > li .product-container .button-container, ul.product_list.grid > li .product-container .button-container {
+    font-size: 1.125em; } }
 ul.product_list.grid .slick-track > li .product-container .button-container > *, ul.product_list.grid > li .product-container .button-container > * {
   float: none;
   width: 50%; }

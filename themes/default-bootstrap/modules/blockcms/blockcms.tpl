@@ -66,9 +66,9 @@
 	<!-- /Block CMS module -->
 {else}
 	<!-- Block CMS module footer -->
-	<section class="footer-block col-xs-12 col-sm-2" id="block_various_links_footer">
+	<section class="footer-block col-xs-12 col-lg-2 col-sm-3" id="block_various_links_footer">
 		{*<h4>{l s='Information' mod='blockcms'}</h4>*}
-		<ul class="toggle-footer">
+		<ul>
 			{if isset($display_home_footer) && $display_home_footer && !$PS_CATALOG_MODE}
 				<li class="item">
 					<a href="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}" title="{l s='Home' mod='blockcms'}">

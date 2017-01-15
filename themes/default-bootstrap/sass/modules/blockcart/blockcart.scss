@@ -29,14 +29,6 @@
 }
 .shopping_cart {
 	width: 73px;
-	@media (max-width: $screen-xs) {
-		padding-top: 20px;
-	}
-	@media (max-width: $screen-lg){
-		margin: 0 auto;
-		float: none;
-		width: 100%;
-	}
 	> a:first-child {
 		background-color: $light-background;
 		box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);

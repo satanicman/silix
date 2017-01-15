@@ -30,14 +30,14 @@ $(document).ready(function(){
 		slidesToShow: 4,
 		prevArrow: '<button type="button" class="slick-prev"><i class="icon slider-prev-icon"></i></button>',
 		nextArrow: '<button type="button" class="slick-next"><i class="icon slider-next-icon"></i></button>',
-		// responsive: [
-		// 	{
-		// 		breakpoint: 480,
-		// 		settings: {
-		// 			slidesToShow: 1
-		// 		}
-		// 	}
-		// ]
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3
+				}
+			}
+		]
 	});
 	highdpiInit();
 	responsiveResize();
