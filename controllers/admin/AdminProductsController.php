@@ -720,6 +720,7 @@ class AdminProductsControllerCore extends AdminController
             $product->indexed = 0;
             $product->active = 0;
             if ($product->add()
+//            && StockAvailable::updateQuantity($product->id, 0, 1000)
             && Category::duplicateProductCategories($id_product_old, $product->id)
             && Product::duplicateSuppliers($id_product_old, $product->id)
             && ($combination_images = Product::duplicateAttributes($id_product_old, $product->id)) !== false
@@ -2440,6 +2441,11 @@ class AdminProductsControllerCore extends AdminController
 
     public function initContent($token = null)
     {
+
+//        $_POST['id_product'] = 1;
+//        for ($i = 0; $i < 32; $i++) {
+//            $this->processDuplicate();
+//        }
         if ($this->display == 'edit' || $this->display == 'add') {
             $this->fields_form = array();
 
