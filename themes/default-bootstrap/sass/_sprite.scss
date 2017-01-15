@@ -66,17 +66,6 @@ $scroll-icon-total-width: 213px;
 $scroll-icon-total-height: 158px;
 $scroll-icon-image: '../img/sprite.png';
 $scroll-icon: (0px, 0px, 0px, 0px, 98px, 125px, 213px, 158px, '../img/sprite.png', 'scroll-icon', );
-$select-small-icon-name: 'select-small-icon';
-$select-small-icon-x: 186px;
-$select-small-icon-y: 141px;
-$select-small-icon-offset-x: -186px;
-$select-small-icon-offset-y: -141px;
-$select-small-icon-width: 13px;
-$select-small-icon-height: 8px;
-$select-small-icon-total-width: 213px;
-$select-small-icon-total-height: 158px;
-$select-small-icon-image: '../img/sprite.png';
-$select-small-icon: (186px, 141px, -186px, -141px, 13px, 8px, 213px, 158px, '../img/sprite.png', 'select-small-icon', );
 $slider-big-next-icon-name: 'slider-big-next-icon';
 $slider-big-next-icon-x: 186px;
 $slider-big-next-icon-y: 0px;
@@ -124,7 +113,7 @@ $slider-prev-icon: (152px, 83px, -152px, -83px, 12px, 28px, 213px, 158px, '../im
 $spritesheet-width: 213px;
 $spritesheet-height: 158px;
 $spritesheet-image: '../img/sprite.png';
-$spritesheet-sprites: ($cart-big-icon, $fish-lift-icon, $fish-right-icon, $sale-icon, $scroll-icon, $select-small-icon, $slider-big-next-icon, $slider-big-prev-icon, $slider-next-icon, $slider-prev-icon, );
+$spritesheet-sprites: ($cart-big-icon, $fish-lift-icon, $fish-right-icon, $sale-icon, $scroll-icon, $slider-big-next-icon, $slider-big-prev-icon, $slider-next-icon, $slider-prev-icon, );
 $spritesheet: (213px, 158px, '../img/sprite.png', $spritesheet-sprites, );
 
 /*

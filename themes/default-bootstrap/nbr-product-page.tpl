@@ -57,7 +57,7 @@
 						{/if}
 					{/foreach}
 				{/if}
-				<select name="n" id="nb_page_items{if isset($paginationId)}_{$paginationId}{/if}" class="form-control">
+				<select name="n" id="nb_page_items{if isset($paginationId)}_{$paginationId}{/if}" class="form-control form-control_small not_uniform">
 					{assign var="lastnValue" value="0"}
 					{foreach from=$nArray item=nValue}
 						{if $lastnValue <= $nb_products}
@@ -66,7 +66,7 @@
 						{assign var="lastnValue" value=$nValue}
 					{/foreach}
 				</select>
-				<span>{l s='per page'}</span>
+				{*<span>{l s='per page'}</span>*}
 			</div>
 		</form>
 	{/if}

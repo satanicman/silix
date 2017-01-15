@@ -22,7 +22,9 @@
 		right: 3px;
 		bottom: 3px;
 		@include border-radius(50%);
-		line-height: em(30px, 17px);
+        @include display-flex;
+		@include align-items(center);
+		@include justify-content(center);
 	}
 }
 .shopping_cart {

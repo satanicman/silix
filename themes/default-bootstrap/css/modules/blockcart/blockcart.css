@@ -22,7 +22,12 @@
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  line-height: 1.76471em; }
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center; }
 
 .shopping_cart {
   width: 73px; }
@@ -267,7 +272,7 @@
   position: static; }
 #layer_cart .layer_cart_product .title {
   display: block;
-  font: 400 23px/29px Arial, Helvetica, sans-serif;
+  font: 400 23px/29px "Open Sans", Arial, Helvetica, sans-serif;
   color: #46a74e;
   margin-bottom: 22px; }
 @media (max-width: 767px) {
@@ -327,7 +332,7 @@
     border-top: 1px solid #d6d4d4; } }
 #layer_cart .layer_cart_cart .title {
   display: block;
-  font: 400 23px/29px Arial, Helvetica, sans-serif;
+  font: 400 23px/29px "Open Sans", Arial, Helvetica, sans-serif;
   color: #000;
   border-bottom: 1px solid #d6d4d4;
   padding-bottom: 13px;
@@ -380,7 +385,7 @@
   padding: 26px 30px 40px 30px;
   position: relative; }
 #layer_cart .crossseling h2 {
-  font: 400 23px/26px Arial, Helvetica, sans-serif;
+  font: 400 23px/26px "Open Sans", Arial, Helvetica, sans-serif;
   color: #000;
   margin-bottom: 25px; }
 #layer_cart .crossseling #blockcart_list {

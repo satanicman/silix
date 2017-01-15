@@ -84,7 +84,7 @@ ul.product_list .product-image-container .quick-view-wrapper-mobile .quick-view-
     bottom: 0px;
     right: 0px; } }
 ul.product_list .product-image-container .quick-view {
-  font: 700 13px/16px Arial, Helvetica, sans-serif;
+  font: 700 13px/16px "Open Sans", Arial, Helvetica, sans-serif;
   color: #777676;
   position: absolute;
   left: 50%;
@@ -159,7 +159,7 @@ ul.product_list .functional-buttons div.compare a.checked:before {
 Product list(Grid) Styles
 ********************************************************/
 ul.product_list.grid .slick-track > li, ul.product_list.grid > li {
-  padding-bottom: 20px;
+  padding-bottom: 45px;
   text-align: center; }
 @media (min-width: 480px) and (max-width: 767px) {
   ul.product_list.grid .slick-track > li, ul.product_list.grid > li {

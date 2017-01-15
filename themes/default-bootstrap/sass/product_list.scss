@@ -209,7 +209,7 @@ Product list(Grid) Styles
 ul.product_list.grid {
 	.slick-track > li,
 	> li {
-		padding-bottom: 20px;
+		padding-bottom: 45px;
 		text-align: center;
 		@media (min-width: $screen-xs) and (max-width: $screen-xs-max) { // min 480px max 767px
 			width: 50%;
