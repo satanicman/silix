@@ -45,10 +45,10 @@ a.fancybox-nav {
 		background: $light-background;
 		border: 3px solid $blue-border-color;
 		box-shadow: 0 0 25px rgba(51, 153, 204, 0.2);
-		@media (max-width: $screen-xs-max) { //max 767px
-			width: 280px;
-			margin: 0 auto;
-		}
+		//@media (max-width: $screen-xs-max) { //max 767px
+		//	width: 280px;
+		//	margin: 0 auto;
+		//}
 		img {
 			//background: $base-box-bg;
 			width: 100%;
@@ -96,7 +96,7 @@ a.fancybox-nav {
 	li {
 		padding: 0 15px;
 		a{
-			display: inline-block;
+			display: block;
 			vertical-align: middle;
 			border: 1px solid #369;
 		}
@@ -303,6 +303,11 @@ span.view_scroll_spacer {
 /* pb-left-column ****************************************************************************** */
 .pb-center-column {
 	//margin-bottom: 30px;
+	@media (max-width: $screen-xs-max) {
+		padding-top: 20px;
+		text-align: center;
+		font-size: 24px;
+	}
 	h1 {
 		color: $grey-text-color;
 		font-family: $font-family-bold;
@@ -471,6 +476,9 @@ span.view_scroll_spacer {
 		background-color: $blue-background-color;
 		box-shadow: 0 3px 7px rgba(0, 153, 204, 0.45);
 		border: none;
+		@media (max-width: $screen-xs-max) {
+			width: 100%;
+		}
 		&.added {
 			background: $green-background-color;
 		}
@@ -702,6 +710,9 @@ table.table-product-discounts{
 	display: inline-block;
 	position: relative;
 	margin-bottom: 25px;
+	@media (max-width: $screen-xs-max) {
+		display: block;
+	}
 	input {
 		border: 1px solid #ccc;
 		@include border-radius(3px);
@@ -711,12 +722,31 @@ table.table-product-discounts{
 		padding: 0 45px;
 		line-height: 40px;
 		text-align: center;
+		color: #555;
+		font-size: em(14px);
+		font-weight: 400;
+		@media (max-width: $screen-xs-max) {
+			width: 100%;
+			height: 60px;
+		}
 	}
 	.btn{
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		left: 0;
+		@media (max-width: $screen-xs-max) {
+			width: 60px;
+			height: 60px;
+			&:before {
+				height: 2px;
+				width: 20px;
+			}
+			&:after {
+				height: 20px;
+				width: 2px;
+			}
+		}
 		&.button-plus {
 			left: auto;
 			right: 0;
@@ -791,7 +821,7 @@ table.table-product-discounts{
 	font-size: em(18px);
 	font-weight: 400;
 	line-height: 1;
-	@media (max-width: $screen-sm-max) { //max 991px
+	@media (min-width: $screen-sm) and (max-width: $screen-sm-max) { //max 991px
 		font-size: em(14px);
 	}
 	.price {

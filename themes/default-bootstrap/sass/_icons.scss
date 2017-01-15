@@ -9,11 +9,11 @@
 .cart-big-icon{
 	@include sprite($cart-big-icon);
 }
-.page-heading:before,
+.page-heading span:before,
 .fish-lift-icon {
 	@include sprite($fish-lift-icon);
 }
-.page-heading:after,
+.page-heading span:after,
 .fish-right-icon {
 	@include sprite($fish-right-icon);
 }
@@ -24,11 +24,21 @@
 .scroll-icon {
 	@include sprite($scroll-icon);
 }
+.pagination_next span:before,
+.pagination_next a:before,
 .slider-big-next-icon {
 	@include sprite($slider-big-next-icon);
+	@media (max-width: $screen-xs-max) {
+		@include sprite($slider-next-icon);
+	}
 }
+.pagination_previous span:before,
+.pagination_previous a:before,
 .slider-big-prev-icon {
 	@include sprite($slider-big-prev-icon);
+	@media (max-width: $screen-xs-max) {
+		@include sprite($slider-prev-icon);
+	}
 }
 .slider-next-icon {
 	@include sprite($slider-next-icon);

@@ -146,6 +146,12 @@ $(document).ready(function()
 				settings: {
 					slidesToShow: 2
 				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1
+				}
 			}
 		]
 	});

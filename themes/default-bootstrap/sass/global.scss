@@ -1139,26 +1139,47 @@ table.table_block td {
 }
 
 .page-heading {
-	@include background-image(linear-gradient(#348fc6, #2a5389));
-	@include background-clip(text);
-	font-family: GUERRILLA, serif;
-	font-size: em(51px);
-	line-height: 1;
-	font-weight: 400;
 	text-align: center;
-	color: transparent;
 	margin: 25px 0 30px;
-	&:before {
-		margin-right: 15px;
+	font-size: em(51px);
+	@media (max-width: $screen-xs-max) {
+		font-size: em(41px);
 	}
-	&:after {
-		margin-left: 15px;
+	&,
+	span {
+		@include background-image(linear-gradient(#348fc6, #2a5389));
+		@include background-clip(text);
+		font-family: GUERRILLA, serif;
+		line-height: 1;
+		font-weight: 400;
+		color: transparent;
 	}
-	&:before,
-	&:after {
+    span {
+		position: relative;
 		display: inline-block;
-		content: '';
-		vertical-align: middle;
+		padding-right: 70px;
+		padding-left: 70px;
+		@media (max-width: $screen-xs-max) {
+			padding: 0;
+			&:before,
+			&:after {
+				display: none !important;
+			}
+		}
+		&:before {
+			left: 0;
+		}
+		&:after {
+			right: 0;
+		}
+		&:before,
+		&:after {
+			position: absolute;
+			top: 50%;
+			margin-top: -14px;
+			display: block;
+			content: '';
+		}
 	}
 
 	//color: $base-heading-color;
@@ -1383,6 +1404,10 @@ ul.footer_links {
 				width: 60px;
 				height: 60px;
 				margin: 0;
+				@media (max-width: $screen-xs-max) {
+					width: 35px;
+					height: 35px;
+				}
 				span {
 					display: block;
 				}
@@ -1396,6 +1421,9 @@ ul.footer_links {
 			&.pagination_next {
 				color: $pagination-prevnext-color;
 				font-weight: bold;
+				@media (max-width: $screen-xs-max) {
+					padding: 0 !important;
+				}
 				> a,
 				> span {
                     width: auto;
@@ -1405,6 +1433,11 @@ ul.footer_links {
 					display: block;
 					padding: 0;
 					// max 767px
+					&:before {
+						display: inline-block;
+						vertical-align: middle;
+						content: '';
+					}
 					@media (max-width: $screen-xs-max) {
 						b {
 							display: none;
@@ -1809,6 +1842,9 @@ div.star a:hover {
 		color: $blue-text-color;
 		background: $light-background;
 		border: 2px solid $blue-border-color;
+		@media (max-width: $screen-xs-max) {
+			text-align: center;
+		}
 		> div {
 			padding: 0 0 55px;
 		}
@@ -1816,6 +1852,9 @@ div.star a:hover {
 			border-top-width: 2px;
 			border-color: $blue-border-color;
 			margin: 0 0 40px;
+			@media (max-width: $screen-xs-max) {
+				display: none;
+			}
 		}
 		.row {
 			position: relative;
@@ -1929,9 +1968,10 @@ div.star a:hover {
 			}
 		}
 		.blockcategories_footer {
-			//clear: left;
-			padding-left: 60px;
-			padding-right: 0;
+			@media (min-width: $screen-sm) {
+                padding-left: 60px;
+                padding-right: 0;
+			}
 			ul {
 				margin: 0;
 			}

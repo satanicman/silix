@@ -5,6 +5,12 @@
     width: 50%;
     clear: none;
     padding: 0; } }
+#block_top_menu .cat-title {
+  background: none;
+  border-style: solid;
+  border-width: 3px 0;
+  border-color: #fff;
+  color: #fff; }
 @media (min-width: 768px) {
   #block_top_menu .sf-menu {
     background: none;

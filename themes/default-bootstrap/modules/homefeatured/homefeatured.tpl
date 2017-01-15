@@ -23,7 +23,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 {if isset($products) && $products}
-	<h3 class="page-heading">{l s='Popular' mod='homefeatured'}</h3>
+	<h3 class="page-heading"><span>{l s='Popular' mod='homefeatured'}</span></h3>
 	{include file="$tpl_dir./product-list.tpl" class='homefeatured product-slider slick_custom' id='homefeatured'}
 {else}
 <ul id="homefeatured" class="homefeatured tab-pane">

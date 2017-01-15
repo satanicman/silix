@@ -514,7 +514,7 @@
 		<!--end HOOK_PRODUCT_TAB -->
 		{/if}
 		{if isset($accessories) && $accessories}
-            <h3 class="page-heading">{l s='Accessories'}</h3>
+            <h3 class="page-heading"><span>{l s='Accessories'}</span></h3>
             {include file="$tpl_dir./product-list.tpl" class='homecategoryproducts product-slider--product slick_custom' id='homecategoryproducts' products=$accessories}
 		{/if}
 		{if isset($HOOK_PRODUCT_FOOTER) && $HOOK_PRODUCT_FOOTER}{$HOOK_PRODUCT_FOOTER}{/if}

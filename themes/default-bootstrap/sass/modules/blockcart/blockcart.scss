@@ -4,10 +4,18 @@
 					Cart Block Styles
 ********************************************************************/
 #header .shopping_cart {
-	position: absolute;
-	top: 100%;
-	right: 15px;
-	z-index: 3;
+	position: relative;
+	margin-top: 20px;
+	@media (min-width: $screen-sm) {
+        position: absolute;
+        top: 100%;
+        right: 15px;
+        z-index: 3;
+		width: 73px;
+		margin: 0;
+	}
+	@media (max-width: $screen-xs-max) {
+	}
     .ajax_cart_quantity {
 		width: 30px;
 		height: 30px;
@@ -25,18 +33,32 @@
         @include display-flex;
 		@include align-items(center);
 		@include justify-content(center);
+        @media (max-width: $screen-xs-max) {
+			right: auto;
+			left: 45px;
+		}
 	}
 }
 .shopping_cart {
-	width: 73px;
 	> a:first-child {
 		background-color: $light-background;
-		box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
 		padding: 10px 13px;
 		display: block;
 		font-weight: bold;
 		color: #777777;
 		overflow: hidden;
+		@media (min-width: $screen-sm) {
+			@include box-shadow(0 10px 15px rgba(0, 0, 0, 0.35));
+		}
+		@media (max-width: $screen-xs-max) {
+			padding: 20px 15px 20px 84px;
+            &:before {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                margin-top: -19px;
+            }
+		}
 		span.ajax_cart_product_txt, span.ajax_cart_product_txt_s {
 			@media (min-width: $screen-sm) and (max-width: $screen-sm-max) { // min 768px max 991px
 				display: none !important;
@@ -52,8 +74,14 @@
 			display: inline-block;
 		}
 	}
+	.ajax_cart_total_label,
 	.ajax_cart_total {
-		display: none !important;
+		font: $font;
+		color: $blue-text-color;
+		font-size: em(20px);
+		@media (min-width: $screen-sm) {
+			display: none !important;
+		}
 	}
 	.block_cart_expand, .block_cart_collapse {
 		&:after {

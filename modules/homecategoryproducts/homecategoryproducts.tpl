@@ -1,6 +1,6 @@
 {foreach from=$categories item=category}
     {if isset($category->products) && $category->products}
-        <h3 class="page-heading">{$category->name}</h3>
+        <h3 class="page-heading"><span>{$category->name}</span></h3>
         {include file="$tpl_dir./product-list.tpl" class='homecategoryproducts product-slider slick_custom' id='homecategoryproducts' products=$category->products}
     {else}
         <ul id="homecategoryproducts" class="homecategoryproducts">

@@ -2,10 +2,16 @@
 					Cart Block Styles
 ********************************************************************/
 #header .shopping_cart {
-  position: absolute;
-  top: 100%;
-  right: 15px;
-  z-index: 3; }
+  position: relative;
+  margin-top: 20px; }
+@media (min-width: 768px) {
+  #header .shopping_cart {
+    position: absolute;
+    top: 100%;
+    right: 15px;
+    z-index: 3;
+    width: 73px;
+    margin: 0; } }
 #header .shopping_cart .ajax_cart_quantity {
   width: 30px;
   height: 30px;
@@ -28,17 +34,31 @@
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center; }
+@media (max-width: 767px) {
+  #header .shopping_cart .ajax_cart_quantity {
+    right: auto;
+    left: 45px; } }
 
-.shopping_cart {
-  width: 73px; }
 .shopping_cart > a:first-child {
   background-color: #fff;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
   padding: 10px 13px;
   display: block;
   font-weight: bold;
   color: #777777;
   overflow: hidden; }
+@media (min-width: 768px) {
+  .shopping_cart > a:first-child {
+    -moz-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35); } }
+@media (max-width: 767px) {
+  .shopping_cart > a:first-child {
+    padding: 20px 15px 20px 84px; }
+  .shopping_cart > a:first-child:before {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    margin-top: -19px; } }
 @media (min-width: 768px) and (max-width: 991px) {
   .shopping_cart > a:first-child span.ajax_cart_product_txt, .shopping_cart > a:first-child span.ajax_cart_product_txt_s {
     display: none !important; } }
@@ -49,8 +69,13 @@
 .shopping_cart > a:first-child:before {
   content: '';
   display: inline-block; }
-.shopping_cart .ajax_cart_total {
-  display: none !important; }
+.shopping_cart .ajax_cart_total_label, .shopping_cart .ajax_cart_total {
+  font: normal 16px/18px "Open Sans", Arial, Helvetica, sans-serif;
+  color: #369;
+  font-size: 1.25em; }
+@media (min-width: 768px) {
+  .shopping_cart .ajax_cart_total_label, .shopping_cart .ajax_cart_total {
+    display: none !important; } }
 .shopping_cart .block_cart_expand:after, .shopping_cart .block_cart_collapse:after {
   content: "\f0d7";
   font-family: "FontAwesome";
