@@ -51,7 +51,7 @@
 			{*{/if}*}
 		</a>
 		{if !$PS_CATALOG_MODE}
-			<div class="cart_block block exclusive">
+			<div class="cart_block block exclusive hidden">
 				<div class="block_content">
 					<!-- block list of products -->
 					<div class="cart_block_list{if isset($blockcart_top) && !$blockcart_top}{if isset($colapseExpandStatus) && $colapseExpandStatus eq 'expanded' || !$ajax_allowed || !isset($colapseExpandStatus)} expanded{else} collapsed unvisible{/if}{/if}">

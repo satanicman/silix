@@ -273,6 +273,7 @@
   opacity: 0.2; }
 
 #layer_cart {
+  color: #000;
   background-color: #fff;
   position: absolute;
   display: none;
