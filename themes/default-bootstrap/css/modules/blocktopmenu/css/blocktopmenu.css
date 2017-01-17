@@ -15,20 +15,20 @@
   #block_top_menu .sf-menu {
     background: none;
     border: none;
-    display: table;
-    table-layout: fixed;
+    text-align: center;
     overflow: hidden; }
   #block_top_menu .sf-menu:before, #block_top_menu .sf-menu:after {
     display: none; }
   #block_top_menu .sf-menu > li {
-    display: table-cell;
+    display: inline-block;
+    padding: 5px 10px;
     vertical-align: middle;
     float: none;
     border: none;
-    margin: 0;
-    text-align: center; }
+    margin: 0; }
   #block_top_menu .sf-menu > li > a {
     display: inline-block;
+    vertical-align: middle;
     text-transform: none;
     padding: 0;
     border: none;

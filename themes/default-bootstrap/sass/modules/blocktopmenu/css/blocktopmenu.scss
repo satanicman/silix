@@ -18,22 +18,22 @@
 		@media (min-width: $screen-sm ) {
 			background: none;
 			border: none;
-			display: table;
-			table-layout: fixed;
+			text-align: center;
 			overflow: hidden;
 			&:before,
 			&:after {
 				display: none;
 			}
 			> li {
-				display: table-cell;
+				display: inline-block;
+				padding: 5px 10px;
 				vertical-align: middle;
 				float: none;
 				border: none;
 				margin: 0;
-				text-align: center;
 				> a {
 					display: inline-block;
+					vertical-align: middle;
 					text-transform: none;
 					padding: 0;
 					border: none;
