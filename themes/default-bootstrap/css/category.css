@@ -64,7 +64,7 @@
   vertical-align: top; }
 #subcategories ul li .subcategory-name {
   font: 600 18px/22px "Open Sans", sans-serif;
-  color: #555454;
+  color: #000;
   text-transform: uppercase; }
 #subcategories ul li .subcategory-name:hover {
   color: #515151; }

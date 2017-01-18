@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAEA,iBAAkB;EACjB,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,iBAAiB;EAC9B,YAAY,EAAE,iBAAiB;AAC/B,mBAAE;EACD,KAAK,EC0Ca,IAAiB;EDzCnC,WAAW,EAAE,IAAI;EACjB,OAAO,EAAE,KAAK;EACd,OAAO,EAAE,gBAAgB;EACzB,MAAM,EAAE,OAAO;EACf,WAAW,EAAC,IAAI;AAChB,yBAAmC;EAPpC,mBAAE;IAQA,SAAS,EAAE,IAAI;AAEhB,qDAAkB;EACjB,UAAU,EAAE,OAAO",
-"sources": ["../../../modules/blockuserinfo/blockuserinfo.scss","file:///D:/OpenServer/domains/silix.loc/themes/default-bootstrap/sass/_theme_variables.scss"],
+"mappings": "AAEA,iBAAkB;EACjB,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,iBAAiB;EAC9B,YAAY,EAAE,iBAAiB;AAC/B,mBAAE;EACD,KAAK,ECoDa,IAAiB;EDnDnC,WAAW,EAAE,IAAI;EACjB,OAAO,EAAE,KAAK;EACd,OAAO,EAAE,gBAAgB;EACzB,MAAM,EAAE,OAAO;EACf,WAAW,EAAC,IAAI;AAChB,yBAAmC;EAPpC,mBAAE;IAQA,SAAS,EAAE,IAAI;AAEhB,qDAAkB;EACjB,UAAU,EAAE,OAAO",
+"sources": ["../../../modules/blockuserinfo/blockuserinfo.scss","file:///e:/Projects/silix/themes/default-bootstrap/sass/_theme_variables.scss"],
 "names": [],
 "file": "blockuserinfo.css"
 }
