@@ -121,8 +121,8 @@ header {
 	}
 	.row {
 		position: relative;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
 		@media (min-width: $screen-md) {
             @include display-flex;
             @include align-items(center);
@@ -1780,6 +1780,11 @@ div.star a:hover {
 }
 
 .header-container {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 2;
 	background: #39c linear-gradient(to top, #28487e 0%, #379dd5 100%);
 }
 

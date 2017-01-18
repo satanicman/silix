@@ -25,7 +25,13 @@
 //global variables
 var responsiveflag = false;
 
+function setTopPadding() {
+	var height = $('.header-container').outerHeight();
+	console.log(height);
+	$('#page').css('paddingTop', height);
+}
 $(document).ready(function(){
+	setTopPadding();
 	$('.product-slider').slick({
 		slidesToShow: 4,
 		prevArrow: '<button type="button" class="slick-prev"><i class="icon slider-prev-icon"></i></button>',
