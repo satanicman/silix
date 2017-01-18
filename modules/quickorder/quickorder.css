@@ -1,0 +1,112 @@
+
+.quickform { height: 100%; overflow-y: scroll;}
+.quickform h2 {
+	padding:15px 11px 15px 26px;
+	font-size:20px;
+	font-weight: bold;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-transform:uppercase;
+	background:#185b9f ;
+	margin: 0;
+-webkit-border-top-left-radius: 4px;
+-webkit-border-top-right-radius: 4px;
+-moz-border-radius-topleft: 4px;
+-moz-border-radius-topright: 4px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+}
+
+.quickform .qform_container {
+	margin:10px 10px 20px;
+	
+
+}
+
+.quickform .form_container {
+	padding:10px 15px;
+}
+
+.quickform .form_container .text {
+	margin: 0;
+}
+
+.quickform .text label {
+    color: #333333;
+    cursor: default;
+    display: inline-block;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.quickform .text input {
+    background-color: #FFFFFF;
+    border: 1px solid #D4D4D4;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    color: rgba(0, 0, 0, 0.75);
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    height: 32px;
+    margin: 0 0 10px;
+    outline: medium none;
+    padding: 6px;
+    transition: all 0.15s linear 0s;
+    width: 100%;
+}
+
+.quickform .text textarea {
+    background-color: #FFFFFF;
+    border: 1px solid #D4D4D4;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    color: rgba(0, 0, 0, 0.75);
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    height: 32px;
+    margin: 0 0 12px;
+    outline: medium none;
+    padding: 6px;
+    transition: all 0.15s linear 0s;
+    width: 100%;
+}
+
+.quickform .text textarea#comment {
+	height: 80px;
+}
+
+.quickform .submit {
+	margin: 0 15px;
+	padding-bottom:0;
+	text-align:right;
+
+}
+
+.quickform #submitOrder {
+
+	border: 0;
+	border-radius: 5px;
+}
+
+.myrequired {
+    float: left;
+    line-height: 14px;
+    padding: 6px 0 0 10px;
+    text-align: left;
+    text-indent: -10px;
+	width: 125px;
+	margin-bottom: 10px;
+}
+
+.qform_container div.error {
+	background: #FDE4E1;
+	margin: 15px;
+	padding: 15px 20px;
+	
+}
+
+.qform_container .success {
+	margin: 20px;
+}

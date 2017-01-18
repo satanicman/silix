@@ -1,0 +1,15 @@
+Новый заквз:
+
+Имя: {firstname}
+Фамилия: {lastname}
+Эл.адрес: {email}
+Адрес: {address}
+Телефон: {phone}
+Комментарий: {comment}
+
+Товары:
+{items}
+
+
+
+{shop_url}

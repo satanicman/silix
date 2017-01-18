@@ -423,8 +423,8 @@ span.exclusive {
 	color: $button-text-color;
 	padding: 0;
 	font-weight: bold;
-	background: rgb(67, 183, 84);
-	@include gradient-vertical(rgba(67, 183, 84, 1), rgba(66, 172, 82, 1));
+	background: $green-background-color;
+	//@include gradient-vertical(rgba(67, 183, 84, 1), rgba(66, 172, 82, 1));
 	border: 1px solid;
 	border-color: #399a49 #247f32 #1a6d27 #399a49;
 	@include border-radius(0);
@@ -432,7 +432,7 @@ span.exclusive {
 		display: block;
 		padding: 10px 10px 10px 14px;
 		border: 1px solid;
-		border-color: #74d578;
+		border-color: $green-border-color;
 		// max 480px
 		@media (max-width: $screen-xs) {
 			font-size: 15px;
@@ -2211,13 +2211,13 @@ div.star a:hover {
 	display: none;
 }
 
-.cart_quantity .cart_quantity_input {
-	height: 27px;
-	line-height: 27px;
-	padding: 0;
-	text-align: center;
-	width: 57px;
-}
+//.cart_quantity .cart_quantity_input {
+//	height: 27px;
+//	line-height: 27px;
+//	padding: 0;
+//	text-align: center;
+//	width: 57px;
+//}
 
 .cart_gift_quantity .cart_quantity_input {
 	height: 27px;
@@ -2226,22 +2226,73 @@ div.star a:hover {
 	text-align: center;
 	width: 57px;
 }
-
+.cart_quantity_button,
+#quantity_wanted_p{
+	display: inline-block;
+	position: relative;
+	margin-bottom: 25px;
+	@media (max-width: $screen-xs-max) {
+		display: block;
+	}
+	input {
+		border: 1px solid #ccc;
+		@include border-radius(3px);
+		/* Style for "form" */
+		width: 135px;
+		height: 40px;
+		padding: 0 45px;
+		line-height: 40px;
+		text-align: center;
+		color: #555;
+		font-size: em(14px);
+		font-weight: 400;
+		@media (max-width: $screen-xs-max) {
+			width: 100%;
+			height: 60px;
+		}
+	}
+	.btn{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		@media (max-width: $screen-xs-max) {
+			width: 60px;
+			height: 60px;
+			&:before {
+				height: 2px;
+				width: 20px;
+			}
+			&:after {
+				height: 20px;
+				width: 2px;
+			}
+		}
+		&.button-plus {
+			left: auto;
+			right: 0;
+		}
+	}
+	label{
+		display: block;
+		margin-bottom: 7px;
+	}
+}
 .table {
 	tbody > tr > td {
 		vertical-align: middle;
 		&.cart_quantity {
-			padding: 41px 14px 25px;
-			width: 70px;
+			padding: 41px 15px 25px;
+			width: 165px;
 			.cart_quantity_button {
 				margin-top: 3px;
-				a {
-					float: left;
-					margin-right: 3px;
-					&+ a {
-						margin-right: 0;
-					}
-				}
+				//a {
+				//	float: left;
+				//	margin-right: 3px;
+				//	&+ a {
+				//		margin-right: 0;
+				//	}
+				//}
 			}
 		}
 		&.cart_delete,

@@ -25,12 +25,12 @@
 
 {capture name=path}{l s='Your shopping cart'}{/capture}
 
-<h1 id="cart_title" class="page-heading">{l s='Shopping-cart summary'}
-	{if !isset($empty) && !$PS_CATALOG_MODE}
-		<span class="heading-counter">{l s='Your shopping cart contains:'}
-			<span id="summary_products_quantity">{$productNumber} {if $productNumber == 1}{l s='product'}{else}{l s='products'}{/if}</span>
-		</span>
-	{/if}
+<h1 id="cart_title" class="page-heading"><span>{l s='Shopping-cart summary'}</span>
+	{*{if !isset($empty) && !$PS_CATALOG_MODE}*}
+		{*<span class="heading-counter">{l s='Your shopping cart contains:'}*}
+			{*<span id="summary_products_quantity">{$productNumber} {if $productNumber == 1}{l s='product'}{else}{l s='products'}{/if}</span>*}
+		{*</span>*}
+	{*{/if}*}
 </h1>
 
 {if isset($account_created)}
@@ -40,7 +40,7 @@
 {/if}
 
 {assign var='current_step' value='summary'}
-{include file="$tpl_dir./order-steps.tpl"}
+{*{include file="$tpl_dir./order-steps.tpl"}*}
 {include file="$tpl_dir./errors.tpl"}
 
 {if isset($empty)}
@@ -84,12 +84,12 @@
 				<tr>
 					<th class="cart_product first_item">{l s='Product'}</th>
 					<th class="cart_description item">{l s='Description'}</th>
-					{if $PS_STOCK_MANAGEMENT}
-						{assign var='col_span_subtotal' value='3'}
-						<th class="cart_avail item text-center">{l s='Availability'}</th>
-					{else}
+					{*{if $PS_STOCK_MANAGEMENT}*}
+						{*{assign var='col_span_subtotal' value='3'}*}
+						{*<th class="cart_avail item text-center">{l s='Availability'}</th>*}
+					{*{else}*}
 						{assign var='col_span_subtotal' value='2'}
-					{/if}
+					{*{/if}*}
 					<th class="cart_unit item text-right">{l s='Unit price'}</th>
 					<th class="cart_quantity item text-center">{l s='Qty'}</th>
 					<th class="cart_delete last_item">&nbsp;</th>
@@ -545,8 +545,8 @@
 	<div id="HOOK_SHOPPING_CART">{$HOOK_SHOPPING_CART}</div>
 	<p class="cart_navigation clearfix">
 		{if !$opc}
-			<a  href="{if $back}{$link->getPageLink('order', true, NULL, 'step=1&amp;back={$back}')|escape:'html':'UTF-8'}{else}{$link->getPageLink('order', true, NULL, 'step=1')|escape:'html':'UTF-8'}{/if}" class="button btn btn-default standard-checkout button-medium" title="{l s='Proceed to checkout'}">
-				<span>{l s='Proceed to checkout'}<i class="icon-chevron-right right"></i></span>
+			<a  href="{if $back}{$link->getPageLink('order', true, NULL, 'step=1&amp;back={$back}')|escape:'html':'UTF-8'}{else}{$link->getPageLink('order', true, NULL, 'step=1')|escape:'html':'UTF-8'}{/if}" class="button btn btn-default standard-checkout button-medium" title="{l s='Proceed to checkout'}" id="quickorder">
+				<span>{l s='Proceed to checkout'}</span>
 			</a>
 		{/if}
 		<a href="{if (isset($smarty.server.HTTP_REFERER) && ($smarty.server.HTTP_REFERER == $link->getPageLink('order', true) || $smarty.server.HTTP_REFERER == $link->getPageLink('order-opc', true) || strstr($smarty.server.HTTP_REFERER, 'step='))) || !isset($smarty.server.HTTP_REFERER)}{$link->getPageLink('index')}{else}{$smarty.server.HTTP_REFERER|escape:'html':'UTF-8'|secureReferrer}{/if}" class="button-exclusive btn btn-default" title="{l s='Continue shopping'}">
