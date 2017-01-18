@@ -73,8 +73,11 @@
 ********************************************************************************/
 	.bx-wrapper {
 		.bx-pager {
-			bottom: 0;
+			bottom: 30px;
 			padding: 0;
+			&-item {
+				vertical-align: middle;
+			}
 		}
 		a {
 			display: block;
@@ -87,7 +90,14 @@
 			direction: ltr!important;
 		}
 		.bx-pager.bx-default-pager a {
-			background: #666;
+			width: 12px;
+			height: 12px;
+			background: $light-background;
+			@include box-shadow(0 2px 10px rgba(0, 0, 0, 0.8));
+			margin: 0 10px;
+			&.active {
+				background: $blue-background-color;
+			}
 		}
 		.bx-controls-direction a {
 			top: auto;
