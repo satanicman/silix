@@ -62,7 +62,7 @@
 			</p>
 		{/if}
 		<!-- left infos-->
-		<div class="pb-left-column col-xs-12 col-sm-5 col-md-5">
+		<div class="pb-left-column col-xs-12 col-sm-5 col-md-4">
 			<!-- product img-->
 			<div id="image-block" class="clearfix">
 				{*{if $product->new}*}
@@ -187,7 +187,7 @@
 		</div> <!-- end pb-left-column -->
 		<!-- end left infos-->
 		<!-- center infos -->
-		<div class="pb-center-column col-xs-12 col-sm-7">
+		<div class="pb-center-column col-xs-12 col-sm-8">
 			{*{if $product->online_only}*}
 				{*<p class="online_only">{l s='Online only'}</p>*}
 			{*{/if}*}

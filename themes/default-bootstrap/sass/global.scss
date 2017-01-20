@@ -1842,7 +1842,7 @@ div.star a:hover {
 .footer-container {
 	// min 768px
 	@media (min-width: $screen-sm) {
-		background: url(../img/footer-bg.png) repeat-x;
+		background: url(../img/footer-bg.png) 50% repeat-x;
         @include background-size(cover);
 		padding: 80px 0 70px;
 	}
