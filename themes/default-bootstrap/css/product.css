@@ -1,7 +1,7 @@
 /* product desc */
 /* primary_block ***************************************************************************** */
 .primary_block {
-  margin-bottom: 60px; }
+  margin-bottom: 20px; }
 
 .top-hr {
   background: #C4C4C4;
@@ -30,9 +30,6 @@ a.fancybox-nav {
   outline: 0; }
 
 /* .pb-left-column ***************************************************************************** */
-@media (min-width: 992px) {
-  .pb-left-column {
-    padding-right: 60px; } }
 .pb-left-column #image-block {
   position: relative;
   display: block;
@@ -56,6 +53,10 @@ a.fancybox-nav {
   z-index: auto !important; }
 .pb-left-column #image-block .new-box, .pb-left-column #image-block .sale-box {
   z-index: 5002; }
+.pb-left-column .b-product-images__list {
+  margin: 0; }
+.pb-left-column .b-product-images__item img {
+  margin: 0 auto; }
 
 /* miniatures */
 .pb-left-column #views_block {
@@ -239,7 +240,7 @@ span.view_scroll_spacer {
   font-family: "Open Sans Bold", sans-serif;
   font-size: 1.625em;
   font-weight: 700;
-  margin: 0 0 15px;
+  margin: 0 0 10px;
   padding: 0;
   line-height: 1; }
 .pb-center-column p {
@@ -553,7 +554,7 @@ table.table-product-discounts tr td, table.table-product-discounts tr th {
   font-weight: 700; }
 
 .b-product-description {
-  margin-top: 20px; }
+  margin-top: 10px; }
 .b-product-description_content {
   border-top: 2px solid #d6d6d6;
   padding-top: 20px;
@@ -591,8 +592,8 @@ table.table-product-discounts tr td, table.table-product-discounts tr th {
   top: 1px;
   margin-left: 0px; }
 
-#availability_statut, #pQuantityAvailable {
-  margin-bottom: 20px; }
+.content_prices, #availability_statut, #pQuantityAvailable {
+  margin-bottom: 10px; }
 
 #pQuantityAvailable span {
   font-weight: 700;
@@ -611,9 +612,6 @@ table.table-product-discounts tr td, table.table-product-discounts tr th {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#fbfbfb',GradientType=0 ); }
 
 /* prices */
-.content_prices {
-  margin-bottom: 20px; }
-
 .discount {
   display: none; }
 

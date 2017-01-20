@@ -5260,9 +5260,9 @@ The `sprites` mixin generates identical output to the CSS template
 @media (max-width: 767px) {
   .pagination_next span:before, .pagination_next a:before, .slider-big-next-icon {
     background-image: url(../img/sprite.png);
-    background-position: -163px -83px;
-    width: 12px;
-    height: 28px; } }
+    background-position: -64px -163px;
+    width: 17px;
+    height: 30px; } }
 
 .pagination_previous span:before, .pagination_previous a:before, .slider-big-prev-icon {
   background-image: url(../img/sprite.png);
@@ -5272,21 +5272,21 @@ The `sprites` mixin generates identical output to the CSS template
 @media (max-width: 767px) {
   .pagination_previous span:before, .pagination_previous a:before, .slider-big-prev-icon {
     background-image: url(../img/sprite.png);
-    background-position: -60px -130px;
-    width: 12px;
-    height: 28px; } }
+    background-position: -86px -163px;
+    width: 17px;
+    height: 30px; } }
 
 .slider-next-icon {
   background-image: url(../img/sprite.png);
-  background-position: -163px -83px;
-  width: 12px;
-  height: 28px; }
+  background-position: -64px -163px;
+  width: 17px;
+  height: 30px; }
 
 .slider-prev-icon {
   background-image: url(../img/sprite.png);
-  background-position: -60px -130px;
-  width: 12px;
-  height: 28px; }
+  background-position: -86px -163px;
+  width: 17px;
+  height: 30px; }
 
 .full-icon {
   background-image: url(../img/sprite.png);
@@ -5335,8 +5335,6 @@ textarea {
 .slick_custom .slick-arrow:before {
   display: none; }
 
-.product-slider.product_list {
-  margin-bottom: 50px; }
 .product-slider .slick-arrow {
   background-color: rgba(35, 35, 35, 0.15);
   padding: 25px 5px; }
@@ -5696,7 +5694,9 @@ input.button_disabled, input.exclusive_disabled, span.exclusive {
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  text-shadow: 0 0 9.9px rgba(255, 255, 255, 0.4);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-shadow: none;
   color: #fff;
   font-family: "Open Sans Bold", sans-serif;
   font-weight: 700;
@@ -5704,10 +5704,14 @@ input.button_disabled, input.exclusive_disabled, span.exclusive {
   background: #39c;
   border: none;
   font-size: inherit;
-  padding: 20px 9px; }
+  padding: 10px 9px; }
 @media (max-width: 1199px) {
   .button.ajax_add_to_cart_button {
     padding: 15px 5px; } }
+.button.ajax_add_to_cart_button.added {
+  background: #093; }
+.button.ajax_add_to_cart_button:hover {
+  text-shadow: 0 0 9.9px rgba(255, 255, 255, 0.4); }
 .button.ajax_add_to_cart_button span {
   margin-right: 3px; }
 
@@ -6138,7 +6142,7 @@ table.std td, table.table_block td {
 
 .page-heading {
   text-align: center;
-  margin: 25px 0 30px;
+  margin: 15px 0 15px;
   font-size: 3.1875em;
   overflow: hidden; }
 @media (max-width: 767px) {
@@ -6653,7 +6657,7 @@ div.star_hover a, div.star a:hover {
   color: #0a4182;
   font-family: Verdana, serif;
   font-weight: 400;
-  padding: 25px 0 45px;
+  padding: 10px 0;
   margin: 0;
   display: block;
   line-height: 1;
@@ -6953,7 +6957,7 @@ div.star_hover a, div.star a:hover {
 .cart_quantity_button, #quantity_wanted_p {
   display: inline-block;
   position: relative;
-  margin-bottom: 25px; }
+  margin-bottom: 15px; }
 @media (max-width: 767px) {
   .cart_quantity_button, #quantity_wanted_p {
     display: block; } }

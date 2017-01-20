@@ -334,6 +334,7 @@ var ajaxCart = {
 
 				if (!jsonData.hasError)
 				{
+					$(callerElement).addClass('added');
 					if (contentOnly)
 						window.parent.ajaxCart.updateCartInformation(jsonData, addedFromProductPage);
 					else

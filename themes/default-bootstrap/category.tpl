@@ -109,10 +109,14 @@
                 {*</div>*}
 			</div>
 			{include file="./product-list.tpl" products=$products}
+			{capture name='MoreProducts'}{hook h='MoreProducts'}{/capture}
+			{if $smarty.capture.MoreProducts}
+				{$smarty.capture.MoreProducts}
+			{/if}
 			<div class="content_sortPagiBar">
 				<div class="bottom-pagination-content clearfix">
 					{*{include file="./product-compare.tpl" paginationId='bottom'}*}
-                    {include file="./pagination.tpl" paginationId='bottom'}
+                    {*{include file="./pagination.tpl" paginationId='bottom'}*}
 				</div>
 			</div>
 		{/if}

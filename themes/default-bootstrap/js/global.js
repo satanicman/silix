@@ -27,7 +27,6 @@ var responsiveflag = false;
 
 function setTopPadding() {
 	var height = $('.header-container').outerHeight();
-	console.log(height);
 	$('#page').css('paddingTop', height);
 }
 $(document).ready(function(){

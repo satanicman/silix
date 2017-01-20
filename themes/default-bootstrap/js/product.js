@@ -117,8 +117,8 @@ if (typeof combinations !== 'undefined' && combinations)
 $(document).ready(function()
 {
 
-	$('.product-images').slick({
-		slidesToShow: 3,
+	$('.b-product-images__list').slick({
+		slidesToShow: 1,
 		prevArrow: '<button type="button" class="slick-prev"><i class="icon slider-big-prev-icon"></i></button>',
 		nextArrow: '<button type="button" class="slick-next"><i class="icon slider-big-next-icon"></i></button>',
 		responsive: [
@@ -297,9 +297,9 @@ $(document).on('mouseover', '#views_block li a', function(){
 	displayImage($(this));
 });
 //add a link on the span 'view full size' and on the big image
-$(document).on('click', '#view_full_size, #image-block', function(e){
-	$('#views_block .shown').click();
-});
+// $(document).on('click', '#view_full_size, #image-block', function(e){
+// 	$('#views_block .shown').click();
+// });
 //catch the click on the "more infos" button at the top of the page
 $(document).on('click', '#short_description_block .button', function(e){
 	$('#more_info_tab_more_info').click();

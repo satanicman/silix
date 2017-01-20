@@ -56,7 +56,7 @@ ul.product_list {
 	.product-image-container {
 		text-align: center;
 		img {
-			width: 100%;
+			//width: 100%;
 			margin: 0 auto;
 		}
 		.quick-view-wrapper-mobile {
@@ -224,7 +224,9 @@ ul.product_list.grid {
 			background: $light-background;
 			padding: 0;
 			position: relative;
-			@include box-shadow(0 0 20px 0 rgba(33,150,243, .35));
+            &:hover {
+				@include box-shadow(0 0 20px 0 rgba(33,150,243, .35));
+			}
 			.product-image-container {
 				//border: 1px solid $base-listing-border-color;
 				//padding: 9px;

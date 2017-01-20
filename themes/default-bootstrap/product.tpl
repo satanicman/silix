@@ -62,7 +62,7 @@
 			</p>
 		{/if}
 		<!-- left infos-->
-		<div class="pb-left-column col-xs-12 col-sm-6 col-md-6">
+		<div class="pb-left-column col-xs-12 col-sm-5 col-md-5">
 			<!-- product img-->
 			<div id="image-block" class="clearfix">
 				{*{if $product->new}*}
@@ -78,26 +78,54 @@
 					{*<span class="discount">{l s='Reduced price!'}</span>*}
 				{*{/if}*}
 				{if $have_image}
-					<span id="view_full_size">
+					<div id="view_full_size">
 						{if $jqZoomEnabled && $have_image && !$content_only}
 							<a class="jqzoom" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" rel="gal1" href="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'thickbox_default')|escape:'html':'UTF-8'}">
 								<img itemprop="image" src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large_default')|escape:'html':'UTF-8'}" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" alt="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}"/>
 							</a>
 						{else}
-							<img id="bigpic" itemprop="image" src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large_default')|escape:'html':'UTF-8'}" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" alt="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" width="{$largeSize.width}" height="{$largeSize.height}"/>
-							{if !$content_only}
-                            	<i class="icon full-icon span_link no-print"></i>
-								{*<span class="span_link no-print">{l s='View larger'}</span>*}
-							{/if}
-						{/if}
-						{if $product->show_price && !isset($restricted_country_mode) && !$PS_CATALOG_MODE && $product->specificPrice && $product->specificPrice.reduction_type == 'percentage'}
-                            <span class="sale-box">
-                                <span class="sale-label">
-                                    {l s="Sale"}<br/>{$product->specificPrice.reduction*100}%
+							<div class="b-product-images">
+								<ul class="b-product-images__list slick_custom">
+									<li class="b-product-images__item">
+										<div class="b-product-images__img">
+											<a href="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'thickbox_default')|escape:'html':'UTF-8'}"	data-fancybox-group="other-views" class="fancybox" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}">
+                                                <img itemprop="image" src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large_default')|escape:'html':'UTF-8'}" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" alt="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" width="{$largeSize.width}" height="{$largeSize.height}" class="img-responsive"/>
+                                            </a>
+										</div>
+									</li>
+									{if isset($images) && count($images) > 1}
+                                        {foreach from=$images item=image}
+                                            {if $image.cover}{continue}{/if}
+                                            {assign var=imageIds value="`$product->id`-`$image.id_image`"}
+                                            {if !empty($image.legend)}
+                                                {assign var=imageTitle value=$image.legend|escape:'html':'UTF-8'}
+                                            {else}
+                                                {assign var=imageTitle value=$product->name|escape:'html':'UTF-8'}
+                                            {/if}
+                                            <li class="b-product-images__item">
+                                                <div class="b-product-images__img">
+													<a{if $jqZoomEnabled && $have_image && !$content_only} href="javascript:void(0);" rel="{literal}{{/literal}gallery: 'gal1', smallimage: '{$link->getImageLink($product->link_rewrite, $imageIds, 'large_default')|escape:'html':'UTF-8'}',largeimage: '{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default')|escape:'html':'UTF-8'}'{literal}}{/literal}"{else} href="{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default')|escape:'html':'UTF-8'}"	data-fancybox-group="other-views" class="fancybox{if $image.id_image == $cover.id_image} shown{/if}"{/if} title="{$imageTitle}">
+                                                        <img class="img-responsive" id="thumb_{$image.id_image}" src="{$link->getImageLink($product->link_rewrite, $imageIds, 'large_default')|escape:'html':'UTF-8'}" alt="{$imageTitle}" title="{$imageTitle}"{if isset($cartSize)} height="{$cartSize.height}" width="{$cartSize.width}"{/if} itemprop="image" />
+													</a>
+												</div>
+                                            </li>
+                                        {/foreach}
+									{/if}
+								</ul>
+							</div>
+                            {if $product->show_price && !isset($restricted_country_mode) && !$PS_CATALOG_MODE && $product->specificPrice && $product->specificPrice.reduction_type == 'percentage'}
+                                <span class="sale-box">
+                                    <span class="sale-label">
+                                        {l s="Sale"}<br/>{$product->specificPrice.reduction*100}%
+                                    </span>
                                 </span>
-                            </span>
+                            {/if}
+							{*{if !$content_only}*}
+                            	{*<i class="icon full-icon span_link no-print"></i>*}
+								{*<span class="span_link no-print">{l s='View larger'}</span>*}
+							{*{/if}*}
 						{/if}
-					</span>
+					</div>
 				{else}
 					<span id="view_full_size">
 						<img itemprop="image" src="{$img_prod_dir}{$lang_iso}-default-large_default.jpg" id="bigpic" alt="" title="{$product->name|escape:'html':'UTF-8'}" width="{$largeSize.width}" height="{$largeSize.height}"/>
@@ -109,9 +137,9 @@
 					</span>
 				{/if}
 			</div> <!-- end image-block -->
-			{if isset($images) && count($images) > 0}
-				<!-- thumbnails -->
-				<div id="views_block" class="clearfix {if isset($images) && count($images) < 2}hidden{/if}">
+			{*{if isset($images) && count($images) > 0}*}
+				{*<!-- thumbnails -->*}
+				{*<div id="views_block" class="clearfix hidden">*}
 					{*{if isset($images) && count($images) > 2}*}
 						{*<span class="view_scroll_spacer">*}
 							{*<a id="view_scroll_left" class="" title="{l s='Other views'}" href="javascript:{ldelim}{rdelim}">*}
@@ -119,33 +147,33 @@
 							{*</a>*}
 						{*</span>*}
 					{*{/if}*}
-					<div id="thumbs_list">
-						<ul id="thumbs_list_frame" class="product-images slick_custom row">
-						{if isset($images)}
-							{foreach from=$images item=image name=thumbnails}
-								{assign var=imageIds value="`$product->id`-`$image.id_image`"}
-								{if !empty($image.legend)}
-									{assign var=imageTitle value=$image.legend|escape:'html':'UTF-8'}
-								{else}
-									{assign var=imageTitle value=$product->name|escape:'html':'UTF-8'}
-								{/if}
-								<li id="thumbnail_{$image.id_image}"{if $smarty.foreach.thumbnails.last} class="last"{/if}>
-									<a{if $jqZoomEnabled && $have_image && !$content_only} href="javascript:void(0);" rel="{literal}{{/literal}gallery: 'gal1', smallimage: '{$link->getImageLink($product->link_rewrite, $imageIds, 'large_default')|escape:'html':'UTF-8'}',largeimage: '{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default')|escape:'html':'UTF-8'}'{literal}}{/literal}"{else} href="{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default')|escape:'html':'UTF-8'}"	data-fancybox-group="other-views" class="fancybox{if $image.id_image == $cover.id_image} shown{/if}"{/if} title="{$imageTitle}">
-										<img class="img-responsive" id="thumb_{$image.id_image}" src="{$link->getImageLink($product->link_rewrite, $imageIds, 'cart_default')|escape:'html':'UTF-8'}" alt="{$imageTitle}" title="{$imageTitle}"{if isset($cartSize)} height="{$cartSize.height}" width="{$cartSize.width}"{/if} itemprop="image" />
-									</a>
-								</li>
-							{/foreach}
-						{/if}
-						</ul>
-					</div> <!-- end thumbs_list -->
+					{*<div id="thumbs_list">*}
+						{*<ul id="thumbs_list_frame" class="product-images slick_custom row">*}
+						{*{if isset($images)}*}
+							{*{foreach from=$images item=image name=thumbnails}*}
+								{*{assign var=imageIds value="`$product->id`-`$image.id_image`"}*}
+								{*{if !empty($image.legend)}*}
+									{*{assign var=imageTitle value=$image.legend|escape:'html':'UTF-8'}*}
+								{*{else}*}
+									{*{assign var=imageTitle value=$product->name|escape:'html':'UTF-8'}*}
+								{*{/if}*}
+								{*<li id="thumbnail_{$image.id_image}"{if $smarty.foreach.thumbnails.last} class="last"{/if}>*}
+									{*<a{if $jqZoomEnabled && $have_image && !$content_only} href="javascript:void(0);" rel="{literal}{{/literal}gallery: 'gal1', smallimage: '{$link->getImageLink($product->link_rewrite, $imageIds, 'large_default')|escape:'html':'UTF-8'}',largeimage: '{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default')|escape:'html':'UTF-8'}'{literal}}{/literal}"{else} href="{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default')|escape:'html':'UTF-8'}"	data-fancybox-group="other-views" class="fancybox{if $image.id_image == $cover.id_image} shown{/if}"{/if} title="{$imageTitle}">*}
+										{*<img class="img-responsive" id="thumb_{$image.id_image}" src="{$link->getImageLink($product->link_rewrite, $imageIds, 'cart_default')|escape:'html':'UTF-8'}" alt="{$imageTitle}" title="{$imageTitle}"{if isset($cartSize)} height="{$cartSize.height}" width="{$cartSize.width}"{/if} itemprop="image" />*}
+									{*</a>*}
+								{*</li>*}
+							{*{/foreach}*}
+						{*{/if}*}
+						{*</ul>*}
+					{*</div> <!-- end thumbs_list -->*}
 					{*{if isset($images) && count($images) > 2}*}
 						{*<a id="view_scroll_right" title="{l s='Other views'}" href="javascript:{ldelim}{rdelim}">*}
 							{*{l s='Next'}*}
 						{*</a>*}
 					{*{/if}*}
-				</div> <!-- end views-block -->
-				<!-- end thumbnails -->
-			{/if}
+				{*</div> <!-- end views-block -->*}
+				{*<!-- end thumbnails -->*}
+			{*{/if}*}
 			{*{if isset($images) && count($images) > 1}*}
 				{*<p class="resetimg clear no-print">*}
 					{*<span id="wrapResetImages" style="display: none;">*}
@@ -159,7 +187,7 @@
 		</div> <!-- end pb-left-column -->
 		<!-- end left infos-->
 		<!-- center infos -->
-		<div class="pb-center-column col-xs-12 col-sm-6">
+		<div class="pb-center-column col-xs-12 col-sm-7">
 			{*{if $product->online_only}*}
 				{*<p class="online_only">{l s='Online only'}</p>*}
 			{*{/if}*}
@@ -327,7 +355,7 @@
                                 <a href="#" data-field-qty="qty" class="btn btn-default button-minus product_quantity_down">
 
                                 </a>
-                                <input type="number" min="1" name="qty" id="quantity_wanted" class="text" value="{if isset($quantityBackup)}{$quantityBackup|intval}{else}{if $product->minimal_quantity > 1}{$product->minimal_quantity}{else}1{/if}{/if}" />
+                                <input type="text" min="1" name="qty" id="quantity_wanted" class="text" value="{if isset($quantityBackup)}{$quantityBackup|intval}{else}{if $product->minimal_quantity > 1}{$product->minimal_quantity}{else}1{/if}{/if}" />
                                 <a href="#" data-field-qty="qty" class="btn btn-default button-plus product_quantity_up">
 
                                 </a>
