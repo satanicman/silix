@@ -29,7 +29,7 @@
 		</p>
 		<p class="text">
 			<label for="payment">{l s='Payment:' mod='quickorder'}<sup class="required">*</sup></label>
-			<select name="payment" id="payment" class="form-control_small form-control_full">
+			<select name="payment" id="payment">
 				<option value="{l s='cash on delivery' mod='quickorder'}">{l s='cash on delivery' mod='quickorder'}</option>
 				<option value="{l s='payment on the card' mod='quickorder'}">{l s='payment on the card' mod='quickorder'}</option>
 			</select>

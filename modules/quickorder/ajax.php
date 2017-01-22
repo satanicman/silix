@@ -24,6 +24,8 @@ if (Tools::isSubmit('submitQorder'))
 				$errors[] = $quickorder->l('You must register at least one phone number', 'ajax');
 			if (!Tools::getValue('firstname') || !Validate::isName(Tools::getValue('firstname')))
 				$errors[] = $quickorder->l('Name is empty or contains error', 'ajax');
+			if (!Tools::getValue('payment') || !Validate::isName(Tools::getValue('payment')))
+				$errors[] = $quickorder->l('Payment is empty or contains error', 'ajax');
 			if (!Tools::getValue('lastname') || !Validate::isName(Tools::getValue('lastname')))
 				$errors[] = $quickorder->l('Last name is empty or contains error', 'ajax');
 			if (!Tools::getValue('address'))
@@ -60,7 +62,7 @@ if (Tools::isSubmit('submitQorder'))
 							$address->firstname = Tools::getValue('firstname');
 							$address->lastname = Tools::getValue('lastname');
 							$address->phone_mobile = Tools::getValue('phone');
-							$address->other = 'Эл.адрес:'.' '.Tools::getValue('email')."\r\n".'Адрес:'.' '.Tools::getValue('address');
+							$address->other = 'Эл.адрес:'.' '.Tools::getValue('email')."\r\n".'Адрес:'.' '.Tools::getValue('address')."\r\n".'Оплата:'.' '.Tools::getValue('payment');
 							$address->address1 = Tools::getValue('address');
 							$address->city = ' ';
 							$address->alias = 'quickorder_' . substr(md5(time()._COOKIE_KEY_), 0, 7);

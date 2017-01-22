@@ -5746,6 +5746,7 @@ input.button_disabled, input.exclusive_disabled, span.exclusive {
 select.form-control {
   border: 1px solid #828282; }
 select.form-control_small {
+  padding: 0 25px 0 6px;
   height: 23px;
   color: #666;
   font-size: 0.875em;
@@ -5760,6 +5761,11 @@ select.form-control_small {
   /* for IE */
   -ms-appearance: none;
   appearance: none !important; }
+select.form-control_full {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 32px; }
 
 .form-control {
   padding: 3px 5px;
@@ -6252,7 +6258,6 @@ ul.footer_links li + li {
 .content_sortPagiBar .sortPagiBar #productsSortForm .selector {
   float: left; }
 .content_sortPagiBar .sortPagiBar select {
-  padding: 0 25px 0 6px;
   margin-left: 10px; }
 .content_sortPagiBar .sortPagiBar .selector1 {
   display: table;
