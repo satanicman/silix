@@ -6251,18 +6251,18 @@ ul.footer_links li + li {
     max-width: 160px; } }
 .content_sortPagiBar .sortPagiBar #productsSortForm .selector {
   float: left; }
-.content_sortPagiBar .sortPagiBar .nbrItemPage select {
+.content_sortPagiBar .sortPagiBar select {
   padding: 0 25px 0 6px;
   margin-left: 10px; }
-.content_sortPagiBar .sortPagiBar .nbrItemPage > div {
+.content_sortPagiBar .sortPagiBar .selector1 {
   display: table;
   table-layout: fixed; }
-.content_sortPagiBar .sortPagiBar .nbrItemPage > div:before, .content_sortPagiBar .sortPagiBar .nbrItemPage > div:after {
-  display: none; }
-.content_sortPagiBar .sortPagiBar .nbrItemPage > div > * {
+.content_sortPagiBar .sortPagiBar .selector1 > * {
   display: table-cell;
   vertical-align: middle;
   float: none; }
+.content_sortPagiBar .sortPagiBar .nbrItemPage > div:before, .content_sortPagiBar .sortPagiBar .nbrItemPage > div:after {
+  display: none; }
 .content_sortPagiBar .sortPagiBar label, .content_sortPagiBar .sortPagiBar select {
   float: left; }
 .content_sortPagiBar .sortPagiBar label {

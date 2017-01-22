@@ -24,25 +24,19 @@
 *}
 {if $blockCategTree && $blockCategTree.children|@count}
 <!-- Block categories module -->
-<div id="categories_block_left" class="block">
-	<h2 class="title_block">
-		{if isset($currentCategory)}
-			{$currentCategory->name|escape}
-		{else}
-			{l s='Categories' mod='blockcategories'}
-		{/if}
-	</h2>
-	<div class="block_content">
-		<ul class="tree {if $isDhtml}dhtml{/if}">
-			{foreach from=$blockCategTree.children item=child name=blockCategTree}
-				{if $smarty.foreach.blockCategTree.last}
-					{include file="$branche_tpl_path" node=$child last='true'}
-				{else}
-					{include file="$branche_tpl_path" node=$child}
-				{/if}
-			{/foreach}
-		</ul>
-	</div>
+{assign var=spaces value=""}
+<div class="block_content selector1">
+    <label for="blockcategoris">{l s='Показать:' mod="blockcategories"}</label>
+    <select name="tree" id="blockcategoris" class="form-control_small not_uniform {if $isDhtml}dhtml{/if}">
+        <option value="0">{l s="Выберите категорию"}</option>
+        {foreach from=$blockCategTree.children item=child name=blockCategTree}
+            {if $smarty.foreach.blockCategTree.last}
+                {include file="$branche_tpl_path" node=$child last='true' spaces=$spaces}
+            {else}
+                {include file="$branche_tpl_path" node=$child spaces=$spaces}
+            {/if}
+        {/foreach}
+    </select>
 </div>
 <!-- /Block categories module -->
 {/if}

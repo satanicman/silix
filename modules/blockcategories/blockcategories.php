@@ -349,6 +349,7 @@ class BlockCategories extends Module
 	public function hookHeader()
 	{
 		$this->context->controller->addJS(_THEME_JS_DIR_.'tools/treeManagement.js');
+		$this->context->controller->addJS(($this->_path).'blockcategories.js');
 		$this->context->controller->addCSS(($this->_path).'blockcategories.css', 'all');
 	}
 

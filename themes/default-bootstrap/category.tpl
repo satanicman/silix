@@ -101,7 +101,11 @@
 			<div class="content_sortPagiBar clearfix">
             	<div class="sortPagiBar clearfix">
             		{*{include file="./product-sort.tpl"}*}
-                	{include file="./nbr-product-page.tpl"}
+					{*{include file="./nbr-product-page.tpl"}*}
+                    {capture name='categoryTop'}{hook h='categoryTop'}{/capture}
+                    {if $smarty.capture.categoryTop}
+                        {$smarty.capture.categoryTop}
+                    {/if}
 				</div>
                 {*<div class="top-pagination-content clearfix">*}
                 	{*{include file="./product-compare.tpl"}*}
