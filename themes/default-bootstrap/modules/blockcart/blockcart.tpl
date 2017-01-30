@@ -220,11 +220,11 @@
 					<span id="layer_cart_product_title" class="product-name"></span>
 					<span id="layer_cart_product_attributes"></span>
 					<div>
-						<strong class="dark">{l s='Quantity' mod='blockcart'}</strong>
+						<span class="dark">{l s='Quantity' mod='blockcart'}</span>
 						<span id="layer_cart_product_quantity"></span>
 					</div>
 					<div>
-						<strong class="dark">{l s='Total' mod='blockcart'}</strong>
+						<span class="dark">{l s='Total' mod='blockcart'}</span>
 						<span id="layer_cart_product_price"></span>
 					</div>
 				</div>
@@ -241,7 +241,7 @@
 					</span>
 				</span>
 				<div class="layer_cart_row">
-					<strong class="dark">
+					<span class="dark">
 						{l s='Total products' mod='blockcart'}
 						{if $use_taxes && $display_tax_label && $show_tax}
 							{if $priceDisplay == 1}
@@ -250,7 +250,7 @@
 								{l s='(tax incl.)' mod='blockcart'}
 							{/if}
 						{/if}
-					</strong>
+					</span>
 					<span class="ajax_block_products_total">
 						{if $cart_qties > 0}
 							{convertPrice price=$cart->getOrderTotal(false, Cart::ONLY_PRODUCTS)}
@@ -297,27 +297,27 @@
 						<span class="price cart_block_tax_cost ajax_cart_tax_cost">{$tax_cost}</span>
 					</div>
 				{/if}
-				<div class="layer_cart_row">
-					<strong class="dark">
-						{l s='Total' mod='blockcart'}
-						{if $use_taxes && $display_tax_label && $show_tax}
-							{if $priceDisplay == 1}
-								{l s='(tax excl.)' mod='blockcart'}
-							{else}
-								{l s='(tax incl.)' mod='blockcart'}
-							{/if}
-						{/if}
-					</strong>
-					<span class="ajax_block_cart_total">
-						{if $cart_qties > 0}
-							{if $priceDisplay == 1}
-								{convertPrice price=$cart->getOrderTotal(false)}
-							{else}
-								{convertPrice price=$cart->getOrderTotal(true)}
-							{/if}
-						{/if}
-					</span>
-				</div>
+				{*<div class="layer_cart_row">*}
+					{*<strong class="dark">*}
+						{*{l s='Total' mod='blockcart'}*}
+						{*{if $use_taxes && $display_tax_label && $show_tax}*}
+							{*{if $priceDisplay == 1}*}
+								{*{l s='(tax excl.)' mod='blockcart'}*}
+							{*{else}*}
+								{*{l s='(tax incl.)' mod='blockcart'}*}
+							{*{/if}*}
+						{*{/if}*}
+					{*</strong>*}
+					{*<span class="ajax_block_cart_total">*}
+						{*{if $cart_qties > 0}*}
+							{*{if $priceDisplay == 1}*}
+								{*{convertPrice price=$cart->getOrderTotal(false)}*}
+							{*{else}*}
+								{*{convertPrice price=$cart->getOrderTotal(true)}*}
+							{*{/if}*}
+						{*{/if}*}
+					{*</span>*}
+				{*</div>*}
 				<div class="button-container">
 					<span class="continue btn btn-default button exclusive-medium" title="{l s='Continue shopping' mod='blockcart'}">
 						<span>

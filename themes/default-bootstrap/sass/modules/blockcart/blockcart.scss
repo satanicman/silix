@@ -351,6 +351,8 @@
 	color: $base-text-color;
 	background-color: $light-background;
 	position: absolute;
+	left: 0;
+	top: 150%;
 	display: none;
 	z-index: 99;
 	width: 84%;
@@ -358,7 +360,7 @@
 	margin-left: 8%;
 	@include border-radius(4px);
 	.layer_cart_product {
-		padding: 30px 30px 30px 30px;
+		padding: 30px;
 		overflow: hidden;
 		position: static;
 		.title {
@@ -395,7 +397,7 @@
 			}
 		}
 		.layer_cart_product_info {
-			padding: 38px 0 0 0;
+			padding: 0;
 			#layer_cart_product_title {
 				display: block;
 				padding-bottom: 8px;
@@ -411,11 +413,11 @@
 	.layer_cart_cart {
 		background: #fafafa;
 		border-left: 1px solid $base-border-color;
-		padding: 21px 30px 170px 30px;
+		padding: 30px 30px 75px 30px;
 		@include border-radius(0px 4px 4px 0px);
 		position: relative;
 		@media (min-width: $screen-lg) { // min 1200px
-			min-height: 318px;
+			min-height: 241px;
 		}
 
 		@media (min-width: $screen-md) and (max-width: $screen-md-max) { // min 992px max 1199px
@@ -446,9 +448,23 @@
 			bottom: 0;
 			left: 0;
 			width: 100%;
-			padding: 0px 30px 20px 30px;
+			padding: 0 30px 30px 30px;
+			display: -webkit-flex;
+			display:  -webkit-box;
+			display:  -ms-flexbox;
+			display:         flex;
 			.btn {
-				margin-bottom: 10px;
+				//margin-bottom: 10px;
+				font-family: "Open Sans", serif;
+				-webkit-flex-grow: 1;
+				-ms-flex-positive: 1;
+				-webkit-box-flex: 1;
+				flex-grow: 1;
+				text-align: center;
+				span {
+					padding-left: 5px;
+					padding-right: 5px;
+				}
 			}
 			span.exclusive-medium {
 				margin-right: 5px;
@@ -493,25 +509,23 @@
 	.crossseling {
 		.crossseling-content {
 			border-top: 1px solid $base-border-color;
-			padding: 26px 30px 40px 30px;
+			padding: 30px;
 			position: relative;
 		}
 		h2 {
 			font: 400 23px/26px $font-family;
 			color: $base-text-color;
-			margin-bottom: 25px;
+			margin-bottom: 10px;
+			margin-top: 0;
 		}
 		#blockcart_list {
-			max-width: 773px;
-			width: 84%;
-			margin: 0 auto;
 			overflow: hidden;
 			ul {
 				display: block;
 				li {
 					float: left;
-					width: 178px;
-					margin: 0 0px 0 0;
+					width: 140px;
+					margin: 0;
 					.product-image-container {
 						border: 1px solid $base-border-color;
 						text-align: center;

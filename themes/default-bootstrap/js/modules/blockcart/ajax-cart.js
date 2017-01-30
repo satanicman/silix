@@ -743,7 +743,7 @@ var ajaxCart = {
 		$('.layer_cart_overlay').css('width','100%');
 		$('.layer_cart_overlay').css('height','100%');
 		$('.layer_cart_overlay').show();
-		$('#layer_cart').css({'top': n}).fadeIn('fast');
+		$('#layer_cart').fadeIn('fast');
 		crossselling_serialScroll();
 	},
 
@@ -880,9 +880,9 @@ function crossselling_serialScroll()
 	if (!!$.prototype.bxSlider)
 		$('#blockcart_caroucel').bxSlider({
 			minSlides: 2,
-			maxSlides: 4,
-			slideWidth: 178,
-			slideMargin: 20,
+			maxSlides: 6,
+			slideWidth: 140,
+			slideMargin: 10,
 			moveSlides: 1,
 			infiniteLoop: false,
 			hideControlOnEnd: true,

@@ -5297,6 +5297,9 @@ The `sprites` mixin generates identical output to the CSS template
 a:hover {
   text-decoration: none; }
 
+* {
+  outline: 0 !important; }
+
 body {
   min-width: 320px;
   height: 100%;
@@ -5336,10 +5339,7 @@ textarea {
   display: none; }
 
 .product-slider .slick-arrow {
-  background-color: rgba(35, 35, 35, 0.15);
-  padding: 25px 5px; }
-.product-slider .slick-arrow:hover, .product-slider .slick-arrow:active, .product-slider .slick-arrow:focus {
-  background-color: rgba(35, 35, 35, 0.15); }
+  padding: 25px 0; }
 
 .product-images .slick-prev {
   left: 15px; }
@@ -5364,8 +5364,8 @@ header .nav nav {
   width: 100%; }
 header .row {
   position: relative;
-  padding-top: 5px;
-  padding-bottom: 5px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 @media (min-width: 992px) {
   header .row {
     display: -webkit-flex;
@@ -5820,7 +5820,8 @@ table.std td, table.table_block td {
   background: #fbfbfb; }
 
 .product-slider {
-  margin: 0; }
+  margin: 0;
+  padding: 0 10px; }
 
 .product-name {
   color: #000;
@@ -5885,7 +5886,11 @@ table.std td, table.table_block td {
   right: 10px;
   top: 10px;
   display: table;
-  table-layout: fixed; }
+  table-layout: fixed;
+  -moz-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  -webkit-transform: scale(0.85);
+  transform: scale(0.85); }
 
 .new-label {
   font: 700 14px/12px "Open Sans Bold", sans-serif;
@@ -6655,7 +6660,7 @@ div.star_hover a, div.star a:hover {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 2;
+  z-index: 4;
   background: #39c linear-gradient(to top, #28487e 0%, #379dd5 100%); }
 
 .breadcrumb {
