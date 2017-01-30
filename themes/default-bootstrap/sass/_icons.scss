@@ -28,17 +28,17 @@
 .pagination_next a:before,
 .slider-big-next-icon {
 	@include sprite($slider-big-next-icon);
-	@media (max-width: $screen-xs-max) {
-		@include sprite($slider-next-icon);
-	}
+	//@media (max-width: $screen-xs-max) {
+	//	@include sprite($slider-next-icon);
+	//}
 }
 .pagination_previous span:before,
 .pagination_previous a:before,
 .slider-big-prev-icon {
 	@include sprite($slider-big-prev-icon);
-	@media (max-width: $screen-xs-max) {
-		@include sprite($slider-prev-icon);
-	}
+	//@media (max-width: $screen-xs-max) {
+	//	@include sprite($slider-prev-icon);
+	//}
 }
 .slider-next-icon {
 	@include sprite($slider-next-icon);

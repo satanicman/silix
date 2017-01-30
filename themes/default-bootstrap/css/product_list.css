@@ -405,7 +405,8 @@ ul.product_list.product-slider--product .slick-track > li .availability, ul.prod
   border: 1px solid #d6d4d4; }
 
 #product ul.product_list.grid.product-slider--product {
-  margin-bottom: 80px; }
+  margin-bottom: 80px;
+  padding: 0 15px; }
 @media (min-width: 992px) {
   #product ul.product_list.grid.product-slider--product .slick-track > li .product-container .button-container {
     font-size: 1.125em; } }

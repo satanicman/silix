@@ -90,6 +90,20 @@ a.fancybox-nav {
 		}
 		&__img {}
 	}
+	.b-images-slider {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 -3px;
+		padding: 10px;
+		&__item {
+			padding: 0 3px;
+		}
+		&__img {
+			border: 1px solid rgba($dark-border-color, .1);
+		}
+	}
 }
 
 
@@ -324,7 +338,7 @@ span.view_scroll_spacer {
 		font-family: $font-family-bold;
 		font-size: em(26px);
 		font-weight: 700;
-		margin: 0 0 10px;
+		margin: 0 0 15px;
 		padding: 0;
 		line-height: 1;
 	}
@@ -480,13 +494,20 @@ span.view_scroll_spacer {
 		margin-bottom: 0;
 	}
 	.exclusive{
-		padding: 0;
-		width: 210px;
+		padding: 0 10px;
 		height: 60px;
 		text-align: center;
 		background-color: $blue-background-color;
 		box-shadow: 0 3px 7px rgba(0, 153, 204, 0.45);
 		border: none;
+		text-shadow: 0 0 7px rgba(255, 255, 255, 0.2);
+		color: $light-text-color;
+		font-family: "Open Sans Extrabold", serif;
+		font-size: em(24px);
+		font-weight: 400;
+		@include display-flex;
+		@include align-items(center);
+        @include justify-content(center);
 		@media (max-width: $screen-xs-max) {
 			width: 100%;
 		}
@@ -498,13 +519,7 @@ span.view_scroll_spacer {
 			background: $slick-background;
 		}
 		span{
-            text-shadow: 0 0 7px rgba(255, 255, 255, 0.2);
-            color: $light-text-color;
-            font-family: "Open Sans Extrabold", serif;
-            font-size: em(24px);
-            font-weight: 400;
-
-			padding: 0;
+			padding: 0 3px 0 0;
 			display: block !important;
 		}
 		&:hover{
@@ -707,7 +722,7 @@ table.table-product-discounts{
 }
 //b-product-description
 .b-product-description {
-	margin-top: 10px;
+	margin-top: 15px;
 	&_content {
 		border-top: 2px solid #d6d6d6;
 		padding-top: 20px;
@@ -756,7 +771,7 @@ table.table-product-discounts{
 #availability_statut,
 #pQuantityAvailable {
 	//display: inline-block;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 #pQuantityAvailable span{
 	font-weight: 700;
@@ -780,22 +795,20 @@ table.table-product-discounts{
 	display: none;
 }
 .our_price_display {
-	color: #666;
-	font-size: em(18px);
+	font-family: "Open Sans Bold", sans-serif;
+	color: #333;
+	font-size: em(26px);
 	font-weight: 400;
 	line-height: 1;
 	@media (min-width: $screen-sm) and (max-width: $screen-sm-max) { //max 991px
-		font-size: em(14px);
+		font-size: em(20px);
 	}
 	.price {
-		color: #333;
-		font-size: em(25px);
+		display: inline-block;
+		padding-left: 5px;
+		color: $blue-text-color;
 		font-weight: 400;
-		margin-top: 5px;
-		display: block;
-		@media (max-width: $screen-sm-max) { //max 991px
-			font-size: em(20px);
-		}
+		font-family: $font-family;
 	}
 }
 #old_price {

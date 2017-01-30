@@ -117,19 +117,19 @@ if (typeof combinations !== 'undefined' && combinations)
 $(document).ready(function()
 {
 
-	$('.b-product-images__list').slick({
-		slidesToShow: 1,
-		prevArrow: '<button type="button" class="slick-prev"><i class="icon slider-big-prev-icon"></i></button>',
-		nextArrow: '<button type="button" class="slick-next"><i class="icon slider-big-next-icon"></i></button>',
-		responsive: [
-			{
-				breakpoint: 992,
-				settings: {
-					slidesToShow: 2
-				}
-			}
-		]
-	});
+	// $('.b-product-images__list').slick({
+	// 	slidesToShow: 1,
+	// 	prevArrow: '<button type="button" class="slick-prev"><i class="icon slider-big-prev-icon"></i></button>',
+	// 	nextArrow: '<button type="button" class="slick-next"><i class="icon slider-big-next-icon"></i></button>',
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 992,
+	// 			settings: {
+	// 				slidesToShow: 2
+	// 			}
+	// 		}
+	// 	]
+	// });
 	$('.product-slider--product').slick({
 		slidesToShow: 5,
 		prevArrow: '<button type="button" class="slick-prev"><i class="icon slider-big-prev-icon"></i></button>',

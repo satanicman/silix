@@ -5257,24 +5257,12 @@ The `sprites` mixin generates identical output to the CSS template
   background-position: 0px -163px;
   width: 27px;
   height: 49px; }
-@media (max-width: 767px) {
-  .pagination_next span:before, .pagination_next a:before, .slider-big-next-icon {
-    background-image: url(../img/sprite.png);
-    background-position: -64px -163px;
-    width: 17px;
-    height: 30px; } }
 
 .pagination_previous span:before, .pagination_previous a:before, .slider-big-prev-icon {
   background-image: url(../img/sprite.png);
   background-position: -32px -163px;
   width: 27px;
   height: 49px; }
-@media (max-width: 767px) {
-  .pagination_previous span:before, .pagination_previous a:before, .slider-big-prev-icon {
-    background-image: url(../img/sprite.png);
-    background-position: -86px -163px;
-    width: 17px;
-    height: 30px; } }
 
 .slider-next-icon {
   background-image: url(../img/sprite.png);
@@ -5456,6 +5444,7 @@ p.info-account {
   padding: 0;
   font: normal 16px/18px "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 1.125em;
+  line-height: 1;
   font-weight: 400; }
 .label-success {
   background-color: #093; }
@@ -6667,7 +6656,7 @@ div.star_hover a, div.star a:hover {
   color: #0a4182;
   font-family: Verdana, serif;
   font-weight: 400;
-  padding: 10px 0;
+  padding: 15px 0;
   margin: 0;
   display: block;
   line-height: 1;
