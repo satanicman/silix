@@ -5846,7 +5846,7 @@ table.std td, table.table_block td {
   font-size: 17px; }
 
 .special-price {
-  color: #f13340; }
+  color: #369; }
 
 .price-percent-reduction {
   background: #f13340;
@@ -6902,6 +6902,16 @@ div.star_hover a, div.star a:hover {
 
 .cart_navigation {
   margin: 0 0 20px; }
+.cart_navigation .exclusive-medium span {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 11px 10px 13px 10px; }
+.cart_navigation .exclusive-medium i {
+  padding-right: 5px; }
 .cart_navigation .button-medium {
   float: right;
   -moz-border-radius: 4px;

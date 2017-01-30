@@ -41,11 +41,7 @@
 			{if !empty($product.gift)}
 				<li class="gift-icon">{l s='Gift!'}</li>
 			{else}
-            	{if !$priceDisplay}
-					<li class="price{if isset($product.is_discounted) && $product.is_discounted && isset($product.reduction_applies) && $product.reduction_applies} special-price{/if}">{convertPrice price=$product.price_wt}</li>
-				{else}
-               	 	<li class="price{if isset($product.is_discounted) && $product.is_discounted && isset($product.reduction_applies) && $product.reduction_applies} special-price{/if}">{convertPrice price=$product.price}</li>
-				{/if}
+				<li class="old-price">{convertPrice price=$product.price_without_specific_price}</li>
 				{if isset($product.is_discounted) && $product.is_discounted && isset($product.reduction_applies) && $product.reduction_applies}
                 	<li class="price-percent-reduction small">
             			{if !$priceDisplay}
@@ -71,7 +67,11 @@
 							&nbsp;{convertPrice price=$priceReduction}&nbsp;
 						{/if}
 					</li>
-					<li class="old-price">{convertPrice price=$product.price_without_specific_price}</li>
+				{/if}
+            	{if !$priceDisplay}
+					<li class="price{if isset($product.is_discounted) && $product.is_discounted && isset($product.reduction_applies) && $product.reduction_applies} special-price{/if}">{convertPrice price=$product.price_wt}</li>
+				{else}
+               	 	<li class="price{if isset($product.is_discounted) && $product.is_discounted && isset($product.reduction_applies) && $product.reduction_applies} special-price{/if}">{convertPrice price=$product.price}</li>
 				{/if}
 			{/if}
 		</ul>

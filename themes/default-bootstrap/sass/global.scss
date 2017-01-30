@@ -231,7 +231,7 @@ p.info-account {
 	font: $font;
 	font-size: em(18px);
 	line-height: 1;
-	
+
 	font-weight: 400;
 	&-success {
 		background-color: #093;
@@ -797,7 +797,7 @@ table.table_block td {
 }
 
 .special-price {
-	color: $product-special-price-color;
+	color: $blue-text-color;
 }
 
 .price-percent-reduction {
@@ -2188,6 +2188,17 @@ div.star a:hover {
 //nav bottom
 .cart_navigation {
 	margin: 0 0 20px;
+	.exclusive-medium {
+		span {
+			@include display-flex;
+			@include align-items(center);
+			@include justify-content(center);
+			padding: 11px 10px 13px 10px;
+		}
+		i {
+			padding-right: 5px;
+		}
+	}
 	.button-medium {
 		float: right;
 		@include border-radius(4px);

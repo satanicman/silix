@@ -121,86 +121,86 @@
 					{/if}
 				{/if}
 
-				{if $use_taxes}
-					{if $priceDisplay}
-						<tr class="cart_total_price">
-							<td rowspan="{$rowspan_total}" colspan="3" id="cart_voucher" class="cart_voucher">
-								{if $voucherAllowed}
-									<form action="{if $opc}{$link->getPageLink('order-opc', true)}{else}{$link->getPageLink('order', true)}{/if}" method="post" id="voucher">
-										<fieldset>
-											<h4>{l s='Vouchers'}</h4>
-											<input type="text" class="discount_name form-control" id="discount_name" name="discount_name" value="{if isset($discount_name) && $discount_name}{$discount_name}{/if}" />
-											<input type="hidden" name="submitDiscount" />
-											<button type="submit" name="submitAddDiscount" class="button btn btn-default button-small"><span>{l s='OK'}</span></button>
-										</fieldset>
-									</form>
-									{if $displayVouchers}
-										<p id="title" class="title-offers">{l s='Take advantage of our exclusive offers:'}</p>
-										<div id="display_cart_vouchers">
-											{foreach $displayVouchers as $voucher}
-												{if $voucher.code != ''}<span class="voucher_name" data-code="{$voucher.code|escape:'html':'UTF-8'}">{$voucher.code|escape:'html':'UTF-8'}</span> - {/if}{$voucher.name}<br />
-											{/foreach}
-										</div>
-									{/if}
-								{/if}
-							</td>
-							<td colspan="{$col_span_subtotal}" class="text-right">{if $display_tax_label}{l s='Total products (tax excl.)'}{else}{l s='Total products'}{/if}</td>
-							<td colspan="2" class="price" id="total_product">{displayPrice price=$total_products}</td>
-						</tr>
-					{else}
-						<tr class="cart_total_price">
-							<td rowspan="{$rowspan_total}" colspan="2" id="cart_voucher" class="cart_voucher">
-								{if $voucherAllowed}
-									<form action="{if $opc}{$link->getPageLink('order-opc', true)}{else}{$link->getPageLink('order', true)}{/if}" method="post" id="voucher">
-										<fieldset>
-											<h4>{l s='Vouchers'}</h4>
-											<input type="text" class="discount_name form-control" id="discount_name" name="discount_name" value="{if isset($discount_name) && $discount_name}{$discount_name}{/if}" />
-											<input type="hidden" name="submitDiscount" />
-											<button type="submit" name="submitAddDiscount" class="button btn btn-default button-small"><span>{l s='OK'}</span></button>
-										</fieldset>
-									</form>
-									{if $displayVouchers}
-										<p id="title" class="title-offers">{l s='Take advantage of our exclusive offers:'}</p>
-										<div id="display_cart_vouchers">
-											{foreach $displayVouchers as $voucher}
-												{if $voucher.code != ''}<span class="voucher_name" data-code="{$voucher.code|escape:'html':'UTF-8'}">{$voucher.code|escape:'html':'UTF-8'}</span> - {/if}{$voucher.name}<br />
-											{/foreach}
-										</div>
-									{/if}
-								{/if}
-							</td>
-							<td colspan="{$col_span_subtotal}" class="text-right">{if $display_tax_label}{l s='Total products (tax incl.)'}{else}{l s='Total products'}{/if}</td>
-							<td colspan="2" class="price" id="total_product">{displayPrice price=$total_products_wt}</td>
-						</tr>
-					{/if}
-				{else}
-					<tr class="cart_total_price">
-						<td rowspan="{$rowspan_total}" colspan="2" id="cart_voucher" class="cart_voucher">
-							{if $voucherAllowed}
-								<form action="{if $opc}{$link->getPageLink('order-opc', true)}{else}{$link->getPageLink('order', true)}{/if}" method="post" id="voucher">
-									<fieldset>
-										<h4>{l s='Vouchers'}</h4>
-										<input type="text" class="discount_name form-control" id="discount_name" name="discount_name" value="{if isset($discount_name) && $discount_name}{$discount_name}{/if}" />
-										<input type="hidden" name="submitDiscount" />
-										<button type="submit" name="submitAddDiscount" class="button btn btn-default button-small">
-											<span>{l s='OK'}</span>
-										</button>
-									</fieldset>
-								</form>
-								{if $displayVouchers}
-									<p id="title" class="title-offers">{l s='Take advantage of our exclusive offers:'}</p>
-									<div id="display_cart_vouchers">
-										{foreach $displayVouchers as $voucher}
-											{if $voucher.code != ''}<span class="voucher_name" data-code="{$voucher.code|escape:'html':'UTF-8'}">{$voucher.code|escape:'html':'UTF-8'}</span> - {/if}{$voucher.name}<br />
-										{/foreach}
-									</div>
-								{/if}
-							{/if}
-						</td>
-						<td colspan="{$col_span_subtotal}" class="text-right">{l s='Total products'}</td>
-						<td colspan="2" class="price" id="total_product">{displayPrice price=$total_products}</td>
-					</tr>
-				{/if}
+				{*{if $use_taxes}*}
+					{*{if $priceDisplay}*}
+						{*<tr class="cart_total_price">*}
+							{*<td rowspan="{$rowspan_total}" colspan="3" id="cart_voucher" class="cart_voucher">*}
+								{*{if $voucherAllowed}*}
+									{*<form action="{if $opc}{$link->getPageLink('order-opc', true)}{else}{$link->getPageLink('order', true)}{/if}" method="post" id="voucher">*}
+										{*<fieldset>*}
+											{*<h4>{l s='Vouchers'}</h4>*}
+											{*<input type="text" class="discount_name form-control" id="discount_name" name="discount_name" value="{if isset($discount_name) && $discount_name}{$discount_name}{/if}" />*}
+											{*<input type="hidden" name="submitDiscount" />*}
+											{*<button type="submit" name="submitAddDiscount" class="button btn btn-default button-small"><span>{l s='OK'}</span></button>*}
+										{*</fieldset>*}
+									{*</form>*}
+									{*{if $displayVouchers}*}
+										{*<p id="title" class="title-offers">{l s='Take advantage of our exclusive offers:'}</p>*}
+										{*<div id="display_cart_vouchers">*}
+											{*{foreach $displayVouchers as $voucher}*}
+												{*{if $voucher.code != ''}<span class="voucher_name" data-code="{$voucher.code|escape:'html':'UTF-8'}">{$voucher.code|escape:'html':'UTF-8'}</span> - {/if}{$voucher.name}<br />*}
+											{*{/foreach}*}
+										{*</div>*}
+									{*{/if}*}
+								{*{/if}*}
+							{*</td>*}
+							{*<td colspan="{$col_span_subtotal}" class="text-right">{if $display_tax_label}{l s='Total products (tax excl.)'}{else}{l s='Total products'}{/if}</td>*}
+							{*<td colspan="2" class="price" id="total_product">{displayPrice price=$total_products}</td>*}
+						{*</tr>*}
+					{*{else}*}
+						{*<tr class="cart_total_price">*}
+							{*<td rowspan="{$rowspan_total}" colspan="2" id="cart_voucher" class="cart_voucher">*}
+								{*{if $voucherAllowed}*}
+									{*<form action="{if $opc}{$link->getPageLink('order-opc', true)}{else}{$link->getPageLink('order', true)}{/if}" method="post" id="voucher">*}
+										{*<fieldset>*}
+											{*<h4>{l s='Vouchers'}</h4>*}
+											{*<input type="text" class="discount_name form-control" id="discount_name" name="discount_name" value="{if isset($discount_name) && $discount_name}{$discount_name}{/if}" />*}
+											{*<input type="hidden" name="submitDiscount" />*}
+											{*<button type="submit" name="submitAddDiscount" class="button btn btn-default button-small"><span>{l s='OK'}</span></button>*}
+										{*</fieldset>*}
+									{*</form>*}
+									{*{if $displayVouchers}*}
+										{*<p id="title" class="title-offers">{l s='Take advantage of our exclusive offers:'}</p>*}
+										{*<div id="display_cart_vouchers">*}
+											{*{foreach $displayVouchers as $voucher}*}
+												{*{if $voucher.code != ''}<span class="voucher_name" data-code="{$voucher.code|escape:'html':'UTF-8'}">{$voucher.code|escape:'html':'UTF-8'}</span> - {/if}{$voucher.name}<br />*}
+											{*{/foreach}*}
+										{*</div>*}
+									{*{/if}*}
+								{*{/if}*}
+							{*</td>*}
+							{*<td colspan="{$col_span_subtotal}" class="text-right">{if $display_tax_label}{l s='Total products (tax incl.)'}{else}{l s='Total products'}{/if}</td>*}
+							{*<td colspan="2" class="price" id="total_product">{displayPrice price=$total_products_wt}</td>*}
+						{*</tr>*}
+					{*{/if}*}
+				{*{else}*}
+					{*<tr class="cart_total_price">*}
+						{*<td rowspan="{$rowspan_total}" colspan="2" id="cart_voucher" class="cart_voucher">*}
+							{*{if $voucherAllowed}*}
+								{*<form action="{if $opc}{$link->getPageLink('order-opc', true)}{else}{$link->getPageLink('order', true)}{/if}" method="post" id="voucher">*}
+									{*<fieldset>*}
+										{*<h4>{l s='Vouchers'}</h4>*}
+										{*<input type="text" class="discount_name form-control" id="discount_name" name="discount_name" value="{if isset($discount_name) && $discount_name}{$discount_name}{/if}" />*}
+										{*<input type="hidden" name="submitDiscount" />*}
+										{*<button type="submit" name="submitAddDiscount" class="button btn btn-default button-small">*}
+											{*<span>{l s='OK'}</span>*}
+										{*</button>*}
+									{*</fieldset>*}
+								{*</form>*}
+								{*{if $displayVouchers}*}
+									{*<p id="title" class="title-offers">{l s='Take advantage of our exclusive offers:'}</p>*}
+									{*<div id="display_cart_vouchers">*}
+										{*{foreach $displayVouchers as $voucher}*}
+											{*{if $voucher.code != ''}<span class="voucher_name" data-code="{$voucher.code|escape:'html':'UTF-8'}">{$voucher.code|escape:'html':'UTF-8'}</span> - {/if}{$voucher.name}<br />*}
+										{*{/foreach}*}
+									{*</div>*}
+								{*{/if}*}
+							{*{/if}*}
+						{*</td>*}
+						{*<td colspan="{$col_span_subtotal}" class="text-right">{l s='Total products'}</td>*}
+						{*<td colspan="2" class="price" id="total_product">{displayPrice price=$total_products}</td>*}
+					{*</tr>*}
+				{*{/if}*}
 				<tr{if $total_wrapping == 0} style="display: none;"{/if}>
 					<td colspan="3" class="text-right">
 						{if $use_taxes}
@@ -221,31 +221,31 @@
 						{/if}
 					</td>
 				</tr>
-				{if $total_shipping_tax_exc <= 0 && (!isset($isVirtualCart) || !$isVirtualCart) && $free_ship}
-					<tr class="cart_total_delivery{if !$opc && (!isset($cart->id_address_delivery) || !$cart->id_address_delivery)} unvisible{/if}">
-						<td colspan="{$col_span_subtotal}" class="text-right">{l s='Total shipping'}</td>
-						<td colspan="2" class="price" id="total_shipping">{l s='Free shipping!'}</td>
-					</tr>
-				{else}
-					{if $use_taxes && $total_shipping_tax_exc != $total_shipping}
-						{if $priceDisplay}
-							<tr class="cart_total_delivery{if $total_shipping_tax_exc <= 0} unvisible{/if}">
-								<td colspan="{$col_span_subtotal}" class="text-right">{if $display_tax_label}{l s='Total shipping (tax excl.)'}{else}{l s='Total shipping'}{/if}</td>
-								<td colspan="2" class="price" id="total_shipping">{displayPrice price=$total_shipping_tax_exc}</td>
-							</tr>
-						{else}
-							<tr class="cart_total_delivery{if $total_shipping <= 0} unvisible{/if}">
-								<td colspan="{$col_span_subtotal}" class="text-right">{if $display_tax_label}{l s='Total shipping (tax incl.)'}{else}{l s='Total shipping'}{/if}</td>
-								<td colspan="2" class="price" id="total_shipping" >{displayPrice price=$total_shipping}</td>
-							</tr>
-						{/if}
-					{else}
-						<tr class="cart_total_delivery{if $total_shipping_tax_exc <= 0} unvisible{/if}">
-							<td colspan="{$col_span_subtotal}" class="text-right">{l s='Total shipping'}</td>
-							<td colspan="2" class="price" id="total_shipping" >{displayPrice price=$total_shipping_tax_exc}</td>
-						</tr>
-					{/if}
-				{/if}
+				{*{if $total_shipping_tax_exc <= 0 && (!isset($isVirtualCart) || !$isVirtualCart) && $free_ship}*}
+					{*<tr class="cart_total_delivery{if !$opc && (!isset($cart->id_address_delivery) || !$cart->id_address_delivery)} unvisible{/if}">*}
+						{*<td colspan="{$col_span_subtotal}" class="text-right">{l s='Total shipping'}</td>*}
+						{*<td colspan="2" class="price" id="total_shipping">{l s='Free shipping!'}</td>*}
+					{*</tr>*}
+				{*{else}*}
+					{*{if $use_taxes && $total_shipping_tax_exc != $total_shipping}*}
+						{*{if $priceDisplay}*}
+							{*<tr class="cart_total_delivery{if $total_shipping_tax_exc <= 0} unvisible{/if}">*}
+								{*<td colspan="{$col_span_subtotal}" class="text-right">{if $display_tax_label}{l s='Total shipping (tax excl.)'}{else}{l s='Total shipping'}{/if}</td>*}
+								{*<td colspan="2" class="price" id="total_shipping">{displayPrice price=$total_shipping_tax_exc}</td>*}
+							{*</tr>*}
+						{*{else}*}
+							{*<tr class="cart_total_delivery{if $total_shipping <= 0} unvisible{/if}">*}
+								{*<td colspan="{$col_span_subtotal}" class="text-right">{if $display_tax_label}{l s='Total shipping (tax incl.)'}{else}{l s='Total shipping'}{/if}</td>*}
+								{*<td colspan="2" class="price" id="total_shipping" >{displayPrice price=$total_shipping}</td>*}
+							{*</tr>*}
+						{*{/if}*}
+					{*{else}*}
+						{*<tr class="cart_total_delivery{if $total_shipping_tax_exc <= 0} unvisible{/if}">*}
+							{*<td colspan="{$col_span_subtotal}" class="text-right">{l s='Total shipping'}</td>*}
+							{*<td colspan="2" class="price" id="total_shipping" >{displayPrice price=$total_shipping_tax_exc}</td>*}
+						{*</tr>*}
+					{*{/if}*}
+				{*{/if}*}
 				<tr class="cart_total_voucher{if $total_discounts == 0} unvisible{/if}">
 					<td colspan="{$col_span_subtotal}" class="text-right">
 						{if $display_tax_label}
@@ -280,6 +280,7 @@
 					</tr>
 				{/if}
 				<tr class="cart_total_price">
+                    <td colspan="3"></td>
 					<td colspan="{$col_span_subtotal}" class="total_price_container text-right">
 						<span>{l s='Total'}</span>
                         <div class="hookDisplayProductPriceBlock-price">
@@ -474,74 +475,74 @@
 		{$addresses_style.phone_mobile = 'address_phone_mobile'}
 		{$addresses_style.alias = 'address_title'}
 	{/if}
-	{if !$advanced_payment_api && ((!empty($delivery_option) && (!isset($isVirtualCart) || !$isVirtualCart)) OR $delivery->id || $invoice->id) && !$opc}
-		<div class="order_delivery clearfix row">
-			{if !isset($formattedAddresses) || (count($formattedAddresses.invoice) == 0 && count($formattedAddresses.delivery) == 0) || (count($formattedAddresses.invoice.formated) == 0 && count($formattedAddresses.delivery.formated) == 0)}
-				{if $delivery->id}
-					<div class="col-xs-12 col-sm-6"{if !$have_non_virtual_products} style="display: none;"{/if}>
-						<ul id="delivery_address" class="address item box">
-							<li><h3 class="page-subheading">{l s='Delivery address'}&nbsp;<span class="address_alias">({$delivery->alias})</span></h3></li>
-							{if $delivery->company}<li class="address_company">{$delivery->company|escape:'html':'UTF-8'}</li>{/if}
-							<li class="address_name">{$delivery->firstname|escape:'html':'UTF-8'} {$delivery->lastname|escape:'html':'UTF-8'}</li>
-							<li class="address_address1">{$delivery->address1|escape:'html':'UTF-8'}</li>
-							{if $delivery->address2}<li class="address_address2">{$delivery->address2|escape:'html':'UTF-8'}</li>{/if}
-							<li class="address_city">{$delivery->postcode|escape:'html':'UTF-8'} {$delivery->city|escape:'html':'UTF-8'}</li>
-							<li class="address_country">{$delivery->country|escape:'html':'UTF-8'} {if $delivery_state}({$delivery_state|escape:'html':'UTF-8'}){/if}</li>
-						</ul>
-					</div>
-				{/if}
-				{if $invoice->id}
-					<div class="col-xs-12 col-sm-6">
-						<ul id="invoice_address" class="address alternate_item box">
-							<li><h3 class="page-subheading">{l s='Invoice address'}&nbsp;<span class="address_alias">({$invoice->alias})</span></h3></li>
-							{if $invoice->company}<li class="address_company">{$invoice->company|escape:'html':'UTF-8'}</li>{/if}
-							<li class="address_name">{$invoice->firstname|escape:'html':'UTF-8'} {$invoice->lastname|escape:'html':'UTF-8'}</li>
-							<li class="address_address1">{$invoice->address1|escape:'html':'UTF-8'}</li>
-							{if $invoice->address2}<li class="address_address2">{$invoice->address2|escape:'html':'UTF-8'}</li>{/if}
-							<li class="address_city">{$invoice->postcode|escape:'html':'UTF-8'} {$invoice->city|escape:'html':'UTF-8'}</li>
-							<li class="address_country">{$invoice->country|escape:'html':'UTF-8'} {if $invoice_state}({$invoice_state|escape:'html':'UTF-8'}){/if}</li>
-						</ul>
-					</div>
-				{/if}
-			{else}
-				{foreach from=$formattedAddresses key=k item=address}
-					<div class="col-xs-12 col-sm-6"{if $k == 'delivery' && !$have_non_virtual_products} style="display: none;"{/if}>
-						<ul class="address {if $address@last}last_item{elseif $address@first}first_item{/if} {if $address@index % 2}alternate_item{else}item{/if} box">
-							<li>
-								<h3 class="page-subheading">
-									{if $k eq 'invoice'}
-										{l s='Invoice address'}
-									{elseif $k eq 'delivery' && $delivery->id}
-										{l s='Delivery address'}
-									{/if}
-									{if isset($address.object.alias)}
-										<span class="address_alias">({$address.object.alias})</span>
-									{/if}
-								</h3>
-							</li>
-							{foreach $address.ordered as $pattern}
-								{assign var=addressKey value=" "|explode:$pattern}
-								{assign var=addedli value=false}
-								{foreach from=$addressKey item=key name=foo}
-								{$key_str = $key|regex_replace:AddressFormat::_CLEANING_REGEX_:""}
-									{if isset($address.formated[$key_str]) && !empty($address.formated[$key_str])}
-										{if (!$addedli)}
-											{$addedli = true}
-											<li><span class="{if isset($addresses_style[$key_str])}{$addresses_style[$key_str]}{/if}">
-										{/if}
-										{$address.formated[$key_str]|escape:'html':'UTF-8'}
-									{/if}
-									{if ($smarty.foreach.foo.last && $addedli)}
-										</span></li>
-									{/if}
-								{/foreach}
-							{/foreach}
-						</ul>
-					</div>
-				{/foreach}
-			{/if}
-		</div>
-	{/if}
+	{*{if !$advanced_payment_api && ((!empty($delivery_option) && (!isset($isVirtualCart) || !$isVirtualCart)) OR $delivery->id || $invoice->id) && !$opc}*}
+		{*<div class="order_delivery clearfix row">*}
+			{*{if !isset($formattedAddresses) || (count($formattedAddresses.invoice) == 0 && count($formattedAddresses.delivery) == 0) || (count($formattedAddresses.invoice.formated) == 0 && count($formattedAddresses.delivery.formated) == 0)}*}
+				{*{if $delivery->id}*}
+					{*<div class="col-xs-12 col-sm-6"{if !$have_non_virtual_products} style="display: none;"{/if}>*}
+						{*<ul id="delivery_address" class="address item box">*}
+							{*<li><h3 class="page-subheading">{l s='Delivery address'}&nbsp;<span class="address_alias">({$delivery->alias})</span></h3></li>*}
+							{*{if $delivery->company}<li class="address_company">{$delivery->company|escape:'html':'UTF-8'}</li>{/if}*}
+							{*<li class="address_name">{$delivery->firstname|escape:'html':'UTF-8'} {$delivery->lastname|escape:'html':'UTF-8'}</li>*}
+							{*<li class="address_address1">{$delivery->address1|escape:'html':'UTF-8'}</li>*}
+							{*{if $delivery->address2}<li class="address_address2">{$delivery->address2|escape:'html':'UTF-8'}</li>{/if}*}
+							{*<li class="address_city">{$delivery->postcode|escape:'html':'UTF-8'} {$delivery->city|escape:'html':'UTF-8'}</li>*}
+							{*<li class="address_country">{$delivery->country|escape:'html':'UTF-8'} {if $delivery_state}({$delivery_state|escape:'html':'UTF-8'}){/if}</li>*}
+						{*</ul>*}
+					{*</div>*}
+				{*{/if}*}
+				{*{if $invoice->id}*}
+					{*<div class="col-xs-12 col-sm-6">*}
+						{*<ul id="invoice_address" class="address alternate_item box">*}
+							{*<li><h3 class="page-subheading">{l s='Invoice address'}&nbsp;<span class="address_alias">({$invoice->alias})</span></h3></li>*}
+							{*{if $invoice->company}<li class="address_company">{$invoice->company|escape:'html':'UTF-8'}</li>{/if}*}
+							{*<li class="address_name">{$invoice->firstname|escape:'html':'UTF-8'} {$invoice->lastname|escape:'html':'UTF-8'}</li>*}
+							{*<li class="address_address1">{$invoice->address1|escape:'html':'UTF-8'}</li>*}
+							{*{if $invoice->address2}<li class="address_address2">{$invoice->address2|escape:'html':'UTF-8'}</li>{/if}*}
+							{*<li class="address_city">{$invoice->postcode|escape:'html':'UTF-8'} {$invoice->city|escape:'html':'UTF-8'}</li>*}
+							{*<li class="address_country">{$invoice->country|escape:'html':'UTF-8'} {if $invoice_state}({$invoice_state|escape:'html':'UTF-8'}){/if}</li>*}
+						{*</ul>*}
+					{*</div>*}
+				{*{/if}*}
+			{*{else}*}
+				{*{foreach from=$formattedAddresses key=k item=address}*}
+					{*<div class="col-xs-12 col-sm-6"{if $k == 'delivery' && !$have_non_virtual_products} style="display: none;"{/if}>*}
+						{*<ul class="address {if $address@last}last_item{elseif $address@first}first_item{/if} {if $address@index % 2}alternate_item{else}item{/if} box">*}
+							{*<li>*}
+								{*<h3 class="page-subheading">*}
+									{*{if $k eq 'invoice'}*}
+										{*{l s='Invoice address'}*}
+									{*{elseif $k eq 'delivery' && $delivery->id}*}
+										{*{l s='Delivery address'}*}
+									{*{/if}*}
+									{*{if isset($address.object.alias)}*}
+										{*<span class="address_alias">({$address.object.alias})</span>*}
+									{*{/if}*}
+								{*</h3>*}
+							{*</li>*}
+							{*{foreach $address.ordered as $pattern}*}
+								{*{assign var=addressKey value=" "|explode:$pattern}*}
+								{*{assign var=addedli value=false}*}
+								{*{foreach from=$addressKey item=key name=foo}*}
+								{*{$key_str = $key|regex_replace:AddressFormat::_CLEANING_REGEX_:""}*}
+									{*{if isset($address.formated[$key_str]) && !empty($address.formated[$key_str])}*}
+										{*{if (!$addedli)}*}
+											{*{$addedli = true}*}
+											{*<li><span class="{if isset($addresses_style[$key_str])}{$addresses_style[$key_str]}{/if}">*}
+										{*{/if}*}
+										{*{$address.formated[$key_str]|escape:'html':'UTF-8'}*}
+									{*{/if}*}
+									{*{if ($smarty.foreach.foo.last && $addedli)}*}
+										{*</span></li>*}
+									{*{/if}*}
+								{*{/foreach}*}
+							{*{/foreach}*}
+						{*</ul>*}
+					{*</div>*}
+				{*{/foreach}*}
+			{*{/if}*}
+		{*</div>*}
+	{*{/if}*}
 	<div id="HOOK_SHOPPING_CART">{$HOOK_SHOPPING_CART}</div>
 	<p class="cart_navigation clearfix">
 		{if !$opc}
@@ -549,8 +550,8 @@
 				<span>{l s='Proceed to checkout'}</span>
 			</a>
 		{/if}
-		<a href="{if (isset($smarty.server.HTTP_REFERER) && ($smarty.server.HTTP_REFERER == $link->getPageLink('order', true) || $smarty.server.HTTP_REFERER == $link->getPageLink('order-opc', true) || strstr($smarty.server.HTTP_REFERER, 'step='))) || !isset($smarty.server.HTTP_REFERER)}{$link->getPageLink('index')}{else}{$smarty.server.HTTP_REFERER|escape:'html':'UTF-8'|secureReferrer}{/if}" class="button-exclusive btn btn-default" title="{l s='Continue shopping'}">
-			<i class="icon-chevron-left"></i>{l s='Continue shopping'}
+		<a href="{if (isset($smarty.server.HTTP_REFERER) && ($smarty.server.HTTP_REFERER == $link->getPageLink('order', true) || $smarty.server.HTTP_REFERER == $link->getPageLink('order-opc', true) || strstr($smarty.server.HTTP_REFERER, 'step='))) || !isset($smarty.server.HTTP_REFERER)}{$link->getPageLink('index')}{else}{$smarty.server.HTTP_REFERER|escape:'html':'UTF-8'|secureReferrer}{/if}" class="btn btn-default button exclusive-medium" title="{l s='Continue shopping'}">
+			<span><i class="icon-chevron-left"></i>{l s='Continue shopping'}</span>
 		</a>
 	</p>
 	<div class="clear"></div>
