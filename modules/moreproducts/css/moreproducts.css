@@ -1,18 +1,13 @@
 #moreProduct_ajax_loader {
-    position: absolute;
-    background: rgba(0,0,0,.3);
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
     display: -webkit-flex;
     display:  -webkit-box;
     display:  -ms-flexbox;
     display:         flex;
     z-index: 3;
+    padding: 10px;
 }
 #moreProduct_ajax_loader > * {
     margin: auto;
     text-align: center;
-    color: #fff;
+    color: #000;
 }
