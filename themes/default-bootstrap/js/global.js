@@ -29,9 +29,11 @@ function setTopPadding() {
 	var height = $('.header-container').outerHeight();
 	$('#page').css('paddingTop', height);
 }
+
+$(window).load(setTopPadding);
+$(window).resize(setTopPadding);
 $(document).ready(function(){
 	setTopPadding();
-	$(window).resize(setTopPadding);
 	$('.product-slider').slick({
 		slidesToShow: 4,
 		prevArrow: '<button type="button" class="slick-prev"><i class="icon slider-prev-icon"></i></button>',
