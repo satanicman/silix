@@ -130,14 +130,18 @@ header {
 		@media (min-width: $screen-md) {
             @include display-flex;
             @include align-items(center);
-            @include justify-content(center);
+            @include justify-content(space-between);
+		}
+		&:before,
+		&:after {
+			display: none;
 		}
 		> .container {
 			position: relative;
 		}
 		#header_logo {
 			//padding-top: 15px;
-			@extend .col-md-3;
+			@extend .col-md-2;
 			@media (max-width: $screen-md) {
 				padding-top: 20px;
                 img {

@@ -32,7 +32,8 @@
 			<select name="payment" id="payment">
 				<option value="{l s='cash on delivery' mod='quickorder'}">{l s='cash on delivery' mod='quickorder'}</option>
 				<option value="{l s='payment on the card' mod='quickorder'}">{l s='payment on the card' mod='quickorder'}</option>
-			</select>
+                <option value="{l s='cash on delivery 2' mod='quickorder'}">{l s='cash on delivery 2' mod='quickorder'}</option>
+            </select>
 
 		</p>
 		<p class="text textarea">

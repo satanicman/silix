@@ -2,7 +2,7 @@
   padding: 20px 0; }
 @media (min-width: 992px) {
   #block_top_menu {
-    width: 50%;
+    width: 58.33333%;
     clear: none;
     padding: 0; } }
 #block_top_menu .cat-title {
@@ -21,7 +21,7 @@
     display: none; }
   #block_top_menu .sf-menu > li {
     display: inline-block;
-    padding: 5px 10px;
+    padding: 5px 25px;
     vertical-align: middle;
     float: none;
     border: none;
