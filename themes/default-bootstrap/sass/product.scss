@@ -43,7 +43,7 @@ a.fancybox-nav {
 		cursor: pointer;
 		padding: 0;
 		background: $light-background;
-		border: 3px solid $blue-border-color;
+		border: 3px solid rgba($dark-border-color, .1);
 		box-shadow: 0 0 25px rgba(51, 153, 204, 0.2);
 		//@media (max-width: $screen-xs-max) { //max 767px
 		//	width: 280px;
@@ -76,7 +76,7 @@ a.fancybox-nav {
 		}
 		.new-box,
 		.sale-box {
-			z-index: 5002
+			//z-index: 5002
 		}
 	}
 	.b-product-images {
@@ -722,7 +722,7 @@ table.table-product-discounts{
 }
 //b-product-description
 .b-product-description {
-	margin-top: 15px;
+	margin-top: 20px;
 	&_content {
 		border-top: 2px solid #d6d6d6;
 		padding-top: 20px;
@@ -806,7 +806,7 @@ table.table-product-discounts{
 	.price {
 		display: inline-block;
 		padding-left: 5px;
-		color: $blue-text-color;
+		color: $blue-light-text-color;
 		font-weight: 400;
 		font-family: $font-family;
 	}

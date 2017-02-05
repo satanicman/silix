@@ -406,12 +406,10 @@ ul.product_list.product-slider--product .slick-track > li .availability, ul.prod
 
 #product ul.product_list.grid.product-slider--product {
   margin-bottom: 80px;
-  padding: 0 15px; }
+  padding: 0 10px; }
 @media (min-width: 992px) {
   #product ul.product_list.grid.product-slider--product .slick-track > li .product-container .button-container {
     font-size: 1.125em; } }
-#product ul.product_list.grid.product-slider--product .slick-track > li .product-container .button-container .button.ajax_add_to_cart_button {
-  padding: 14px 5px; }
 #product ul.product_list.grid.product-slider--product .slick-track > li .product-container h5 {
   margin: 10px 0; }
 

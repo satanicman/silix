@@ -132,8 +132,8 @@ $(document).ready(function()
 	// });
 	$('.product-slider--product').slick({
 		slidesToShow: 5,
-		prevArrow: '<button type="button" class="slick-prev"><i class="icon slider-big-prev-icon"></i></button>',
-		nextArrow: '<button type="button" class="slick-next"><i class="icon slider-big-next-icon"></i></button>',
+		prevArrow: '<button type="button" class="slick-prev"><i class="icon slider-prev-icon"></i></button>',
+		nextArrow: '<button type="button" class="slick-next"><i class="icon slider-next-icon"></i></button>',
 		responsive: [
 			{
 				breakpoint: 1200,

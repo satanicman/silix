@@ -25,7 +25,7 @@
 {include file="$tpl_dir./errors.tpl"}
 {if isset($category)}
 	{if $category->id AND $category->active}
-		<h1>{$category->name|escape:'html':'UTF-8'}</h1>
+		<h1 class="page-heading"><span>{$category->name|escape:'html':'UTF-8'}</span></h1>
     	{*{if $scenes || $category->description || $category->id_image}*}
 			{*<div class="content_scene_cat">*}
             	 {*{if $scenes}*}

@@ -359,6 +359,11 @@
 	margin-right: 8%;
 	margin-left: 8%;
 	@include border-radius(4px);
+	#layer_cart_product_quantity,
+	#layer_cart_product_price,
+	#ajax_block_products_total {
+		color: $description-color;
+	}
 	.layer_cart_product {
 		padding: 30px;
 		overflow: hidden;
@@ -432,10 +437,10 @@
 		.title {
 			display: block;
 			font: 400 23px/29px $font-family;
-			color: $base-text-color;
-			border-bottom: 1px solid $base-border-color;
+			color: $blue-light-text-color;
+			//border-bottom: 1px solid $base-border-color;
 			padding-bottom: 13px;
-			margin-bottom: 17px;
+			margin-bottom: 9px;
 			@media (max-width: $screen-xs-max) { // max 767px
 				font-size: 18px;
 			}
