@@ -6686,14 +6686,10 @@ div.star_hover a, div.star a:hover {
 @media (min-width: 768px) {
   .footer-container {
     background: url(../img/footer-bg.png) 50% repeat-x;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    padding: 80px 0 70px; } }
+    padding: 30px 0; } }
 .footer-container .container {
-  padding-top: 55px;
-  padding-bottom: 65px; }
+  padding-top: 10px;
+  padding-bottom: 10px; }
 .footer-container #footer {
   color: #369;
   background: #fff;
@@ -6702,11 +6698,11 @@ div.star_hover a, div.star a:hover {
   .footer-container #footer {
     text-align: center; } }
 .footer-container #footer > div {
-  padding: 0 0 55px; }
+  padding: 0 0 30px; }
 .footer-container #footer .hr {
   border-top-width: 2px;
   border-color: #39c;
-  margin: 0 0 40px; }
+  margin: 10px 0 5px; }
 @media (max-width: 767px) {
   .footer-container #footer .hr {
     display: none; } }
@@ -6750,9 +6746,9 @@ div.star_hover a, div.star a:hover {
 .footer-container #footer ul li {
   padding-bottom: 8px; }
 .footer-container #footer .category_footer li {
-  width: 50%;
+  width: 20%;
   float: left;
-  padding-right: 10px; }
+  padding: 5px 15px; }
 .footer-container #footer #footer_logo {
   padding-top: 14px; }
 @media (max-width: 1199px) {
@@ -6760,8 +6756,13 @@ div.star_hover a, div.star a:hover {
     padding: 14px; } }
 .footer-container #footer #footer_logo img {
   margin: 0 auto; }
+.footer-container #footer #block_various_links_footer {
+  padding: 0; }
 .footer-container #footer #block_various_links_footer ul {
   margin: 0; }
+.footer-container #footer #block_various_links_footer ul li {
+  padding: 6px 15px;
+  display: inline-block; }
 .footer-container #footer #block_contact_infos {
   border-left: 1px solid #515151; }
 @media (max-width: 767px) {
@@ -6788,10 +6789,12 @@ div.star_hover a, div.star a:hover {
   color: #908f8f; }
 @media (min-width: 768px) {
   .footer-container #footer .blockcategories_footer {
-    padding-left: 60px;
+    padding-left: 0;
     padding-right: 0; } }
 .footer-container #footer .blockcategories_footer ul {
   margin: 0; }
+.footer-container #footer #social_block {
+  text-align: right; }
 @media (max-width: 1199px) {
   .footer-container #footer #social_block {
     text-align: center;

@@ -35,13 +35,18 @@
 				<div class="footer-container">
 					<footer id="footer"  class="container">
 						<div class="col-md-12 clearfix">
+                            {capture name='footerTop'}{hook h='footerTop'}{/capture}
+                            {if $smarty.capture.footerTop}
+                                {$smarty.capture.footerTop}
+                            {/if}
+                            <div class="clearfix"></div>
 							<hr class="hr">
 							<div class="clearfix"></div>
-							<div class="col-lg-3 col-sm-12" id="footer_logo">
-								<a href="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}" title="{$shop_name|escape:'html':'UTF-8'}">
-                                    <img src="{$img_dir}footer-logo.png" alt="{$shop_name|escape:'html':'UTF-8'}" class="img-responsive">
-                                </a>
-							</div>
+							{*<div class="col-lg-3 col-sm-12" id="footer_logo">*}
+								{*<a href="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}" title="{$shop_name|escape:'html':'UTF-8'}">*}
+                                    {*<img src="{$img_dir}footer-logo.png" alt="{$shop_name|escape:'html':'UTF-8'}" class="img-responsive">*}
+                                {*</a>*}
+							{*</div>*}
 							{$HOOK_FOOTER}
 						</div>
 					</footer>

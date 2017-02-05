@@ -24,7 +24,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <section id="social_block" class="col-lg-2 col-xs-12">
-	<h4>{l s='We are in social networks:' mod='blocksocial'}</h4>
+	{*<h4>{l s='We are in social networks:' mod='blocksocial'}</h4>*}
 	<ul class="clearfix">
 		{if isset($facebook_url) && $facebook_url != ''}
 			<li class="facebook">
